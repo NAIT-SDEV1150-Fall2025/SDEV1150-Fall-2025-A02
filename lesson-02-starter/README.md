@@ -48,7 +48,7 @@ or
 ```sh
 npm i
 ```
-3. Run the dev server with the `dev` script: 
+3. Run the dev server with the `dev` script:
 ```sh
 npm run dev
 ```
@@ -73,7 +73,7 @@ git add .
 ```sh
 git commit -m 'Lesson 02 updates'
 ```
-4. Push your changes to the remote workbook repository: 
+4. Push your changes to the remote workbook repository:
 ```sh
 git push origin main
 ```
