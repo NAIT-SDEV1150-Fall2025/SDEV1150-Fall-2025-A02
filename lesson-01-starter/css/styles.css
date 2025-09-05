@@ -1,0 +1,21 @@
+/* This is CSS
+
+How we style elements
+h1 below is how to select the element
+font-family here is how to change the type of font
+color changes the text color
+
+*/
+h1 {
+    /* changes the text type, below is a declaration */
+    font-family: Arial, Helvetica, sans-serif;
+    /* changet the text family, below is a declaration */
+    color: blue;
+}
+
+/* apply styles to the entire body
+will apply to all elements here */
+body {
+    /* all elements will have this except for the h1 */
+    font-family: 'Courier New', Courier, monospace;
+}
