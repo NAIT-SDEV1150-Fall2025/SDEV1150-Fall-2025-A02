@@ -11,6 +11,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     /* changet the text family, below is a declaration */
     color: blue;
+    font-size: 40px; /*always end with a ; */
 }
 
 /* apply styles to the entire body
@@ -18,4 +19,21 @@ will apply to all elements here */
 body {
     /* all elements will have this except for the h1 */
     font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
+
+p {
+    background-color: greenyellow;
+}
+
+/* we're going to add a class and talk about how this
+adds to it
+the . before purple-background means a class*/
+.purple-background {
+    background-color: purple;
+    /* change the color of the text to white */
+    color: white
+}
+
+/* These matchers like "h1" and ".purple-background" we're going to use this
+in our javascript to select elements. */
