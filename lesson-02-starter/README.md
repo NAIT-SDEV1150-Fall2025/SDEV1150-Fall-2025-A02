@@ -18,6 +18,13 @@ Clone your workbook repository to your machine and open the new repository direc
 
 The build tools we will use in this course rely on [Node.js](https://nodejs.org/en). Visit the Node.js site and download and install Node on your machine.
 
+You can check that it's installed by using the following command in the terminal
+
+`node -v` which will show the version of node
+
+`npm -v` which shoes the version of nbpm
+
+
 ## Vite
 
 [Vite](https://vite.dev/) is a frontend build tool used for building web applications.
