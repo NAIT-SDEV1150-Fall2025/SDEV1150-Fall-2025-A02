@@ -49,7 +49,7 @@ if (x > 10) {
 // loops are structure that's super important
 let count = 0;
 
-while (count < 5) {
+while (count < 3) {
   // the condition needs to be true
   // to execute this piece
   console.log(`the count is ${count}`);
@@ -60,6 +60,16 @@ while (count < 5) {
 }
 
 // 5. do-while loop
+// I never use these and I never see them used
+// or I see them used very very seldomly.
+// this executes at least once
+debugger;
+do {
+  console.log('in the do while loop at least once')
+  console.log(x)
+} while (x < 5) // x < 5 is false
+// same rules apply except it executes once.
+
 // 6. for loop
 
 // Student TODO:
