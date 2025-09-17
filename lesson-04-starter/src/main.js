@@ -14,6 +14,7 @@ const SOMETHING = "ELSE"; // add semi colon on the end.
 const x = 5;
 console.log(`x is ${x}`);
 if (x > 0) {
+  // this code will only execute if condition x > 0 is true
   console.log('x is positive');
 }
 
