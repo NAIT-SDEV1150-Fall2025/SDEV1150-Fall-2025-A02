@@ -34,11 +34,13 @@ if (x % 2 === 0) {
 // 3. Nested if-else
 // this is when you have more than one condition
 // that you want to check.
+// let's add a command here called debugger.
+debugger;
 if (x > 10) {
   console.log('x is greater than 10');
-} else if (x > 5) {
+} else if (x > 5) { // this will execute only if x > 10 is false
   console.log('x is greater than 5');
-} else if (x > 1) {
+} else if (x > 1) { // this will only execute if both above are false.
   console.log('x is greater than 1')
 } else {
   console.log('x is less than 1')
