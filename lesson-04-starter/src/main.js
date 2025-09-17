@@ -63,14 +63,22 @@ while (count < 3) {
 // I never use these and I never see them used
 // or I see them used very very seldomly.
 // this executes at least once
-debugger;
+// debugger;
 do {
-  console.log('in the do while loop at least once')
-  console.log(x)
+  console.log('in the do while loop at least once');
+  console.log(x);
 } while (x < 5) // x < 5 is false
 // same rules apply except it executes once.
 
 // 6. for loop
+// you're going to use this a ton because a lot of times
+// you're going to be looping over a list of items
+
+
+
+for (let i = 0; i < 4; i = i + 1) {
+  console.log(`in iteration ${i}`);
+}
 
 // Student TODO:
 // 7. Snippet with bugs for debugging practice
