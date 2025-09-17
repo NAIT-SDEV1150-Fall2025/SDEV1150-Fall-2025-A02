@@ -19,6 +19,17 @@ if (x > 0) {
 }
 
 // 2. if-else
+// in javascript you use === instead of == (checks for the type as well)
+// modulo % is the remainder
+// I'm going to check if a value is even or odd
+if (x % 2 === 0) {
+  console.log(`x is even`)
+} else {
+  // this will only execute if the condition in
+  // the if statement is false.
+  console.log(`x is odd`)
+}
+
 // 3. Nested if-else
 // 4. while loop
 // 5. do-while loop
