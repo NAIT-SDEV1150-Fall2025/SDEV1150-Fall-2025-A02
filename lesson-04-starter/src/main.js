@@ -73,9 +73,6 @@ do {
 // 6. for loop
 // you're going to use this a ton because a lot of times
 // you're going to be looping over a list of items
-
-
-
 for (let i = 0; i < 4; i = i + 1) {
   console.log(`in iteration ${i}`);
 }
@@ -83,17 +80,21 @@ for (let i = 0; i < 4; i = i + 1) {
 // Student TODO:
 // 7. Snippet with bugs for debugging practice
 // Snippet with bugs for debugging practice - uncomment when ready
-/*
+
 const num = 10;
 
-if (num < 5) { // Intentional bug: should be num > 5
+// second bug here for you to solve.
+// num < 5 change to num > 5 so that it behaves properly
+if (num > 5) { // Intentional bug: should be num > 5
   console.log('num is greater than 5');
 } else {
   console.log('num is 5 or less');
 }
 
-for (let k = 0; k < 3; k = k - 1) { // Intentional bug: k should increment
+// this  k = k - 1 will cause the bug because the
+// condition will always be true
+for (let k = 0; k < 3; k = k + 1) { // Intentional bug: k should increment
   console.log(k);
 }
-*/
+
 // 8. Debugging practice
