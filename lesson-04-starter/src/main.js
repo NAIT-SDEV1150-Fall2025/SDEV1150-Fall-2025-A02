@@ -35,7 +35,7 @@ if (x % 2 === 0) {
 // this is when you have more than one condition
 // that you want to check.
 // let's add a command here called debugger.
-debugger;
+// debugger;
 if (x > 10) {
   console.log('x is greater than 10');
 } else if (x > 5) { // this will execute only if x > 10 is false
@@ -46,6 +46,15 @@ if (x > 10) {
   console.log('x is less than 1')
 }
 // 4. while loop
+// loops are structure that's super important
+let count = 0;
+
+while (count < 5) {
+  // the condition needs to be true
+  // to execute this piece
+  console.log(`the count is ${count}`);
+}
+
 // 5. do-while loop
 // 6. for loop
 
