@@ -32,6 +32,17 @@ if (x % 2 === 0) {
 }
 
 // 3. Nested if-else
+// this is when you have more than one condition
+// that you want to check.
+if (x > 10) {
+  console.log('x is greater than 10');
+} else if (x > 5) {
+  console.log('x is greater than 5');
+} else if (x > 1) {
+  console.log('x is greater than 1')
+} else {
+  console.log('x is less than 1')
+}
 // 4. while loop
 // 5. do-while loop
 // 6. for loop
