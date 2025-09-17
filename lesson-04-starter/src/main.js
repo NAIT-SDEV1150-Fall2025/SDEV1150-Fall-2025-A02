@@ -13,6 +13,9 @@ const SOMETHING = "ELSE"; // add semi colon on the end.
 // languages are the same.
 const x = 5;
 console.log(`x is ${x}`);
+if (x > 0) {
+  console.log('x is positive');
+}
 
 // 2. if-else
 // 3. Nested if-else
