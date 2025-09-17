@@ -1,7 +1,19 @@
 console.log('Lesson 04 starter loaded');
 
+// First we're going to take a look an error.
+const SOMETHING = "ELSE"; // add semi colon on the end.
+
+// let's change it, it's going to break because it's unchangeable
+// SOMETHING = "TEST"
+
 // Instructor TODO:
 // 1. Simple if
+// these are really similar to what you're learning
+// in python, this falls under the 90% of programming
+// languages are the same.
+const x = 5;
+console.log(`x is ${x}`);
+
 // 2. if-else
 // 3. Nested if-else
 // 4. while loop
