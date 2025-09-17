@@ -53,6 +53,10 @@ while (count < 5) {
   // the condition needs to be true
   // to execute this piece
   console.log(`the count is ${count}`);
+  // you need to increase the counter
+  count = count + 1;
+  // if you don't have this line or an exit
+  // condition you are going to what's called an infinite loop
 }
 
 // 5. do-while loop
