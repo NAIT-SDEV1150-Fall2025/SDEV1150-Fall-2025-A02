@@ -1,18 +1,12 @@
-# Lesson 05 Starter
+# Lesson 08 Starter
 
-## Setup the lesson example
-
-Create a new vanilla project using the following command:
-
-```sh
-npm create vite@latest lesson-05 -- --template vanilla
-```
+## Rename the starter folder to to lesson-08/
 
 ## Install dependencies and run the dev server
 
-1. Move into the lesson-05/ directory:
+1. Move into the lesson-08/ directory:
 ```sh
-cd lesson-05
+cd lesson-08
 ```
 2. Install the necessary dependencies:
 ```sh
@@ -45,7 +39,7 @@ git add .
 ```
 3. Commit the changes:
 ```sh
-git commit -m 'Lesson 05 Example'
+git commit -m 'Lesson 08 Example'
 ```
 4. Push your changes to the remote workbook repository: 
 ```sh

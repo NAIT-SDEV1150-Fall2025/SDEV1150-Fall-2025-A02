@@ -6,12 +6,43 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <link rel="stylesheet" href="css/main.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lesson 03 - Intro to JavaScript: Types, Variables, Built-in Functions</title>
+  <title>Lesson 05 - Intro to Document Object Model (DOM)</title>
   <script type="module" src="/src/main.js"></script>
 </head>
 
 <body>
-  <h1>Lesson 03 - Intro to JavaScript: Types, Variables, Built-in Functions</h1>
+  <header>
+    <section class="hero">
+      <div>
+        <h1 id="page-title">Lesson 05 - Intro to Document Object Model (DOM)</h1>
+        <p class="tagline">Selecting and modifying elements</p>
+      </div>
+      <img id="hero-img" src="/manipulation.jpg" alt="Hero image" />
+      <p id="hero-caption">This caption will be updated via JavaScript.</p>
+    </section>
+  </header>
+
+  <main>
+    <section>
+      <h2>Featured List</h2>
+      <ul id="feature-list">
+        <li class="feature">Fast</li>
+        <li class="feature">Accessible</li>
+        <li class="feature">Reliable</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Dynamic Area</h2>
+      <div id="dynamic-box">
+        <p class="desc">This content may be replaced with <strong>innerHTML</strong>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small id="footer-note">&copy;2025 SDEV1150</small>
+  </footer>
 </body>
 
 </html>

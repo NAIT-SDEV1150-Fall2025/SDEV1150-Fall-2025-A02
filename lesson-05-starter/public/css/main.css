@@ -1,3 +1,64 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+  --accent: #0d6efd;
+  --bg: #f6f8fa;
+  --text: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2 {
+  margin: 0 0 0.5rem;
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+.tagline {
+  color: #555;
+}
+
+#hero-img {
+  max-width: 320px;
+  display: block;
+  border-radius: 8px;
+  margin: 0.5rem 0 0.25rem;
+  border: 2px solid transparent;
+}
+
+#dynamic-box {
+  border: 1px dashed #bbb;
+  padding: 0.75rem;
+  background: #fff;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+.highlight {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.feature {
+  padding: 0.25rem 0.5rem;
+}
+
+.footer-strong {
+  color: var(--accent);
+  font-weight: 700;
+}

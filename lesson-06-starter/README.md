@@ -1,18 +1,18 @@
-# Lesson 03 Starter
+# Lesson 06 Starter
 
 ## Setup the lesson example
 
 Create a new vanilla project using the following command:
 
 ```sh
-npm create vite@latest lesson-03 -- --template vanilla
+npm create vite@latest lesson-06 -- --template vanilla
 ```
 
 ## Install dependencies and run the dev server
 
-1. Move into the lesson-03/ directory:
+1. Move into the lesson-06/ directory:
 ```sh
-cd lesson-03
+cd lesson-06
 ```
 2. Install the necessary dependencies:
 ```sh
@@ -30,7 +30,9 @@ npm run dev
 5. You should see the default render for the vite project.
 6. Use this as the base for today's examples.
 
-## 
+## Instructor Demo and Student Exercise
+
+Complete the demo along with your instructor and then attempt the exercise prompts (see the comments in the `main.js` file).
 
 ## Push to your GitHub workbook repo
 
@@ -43,7 +45,7 @@ git add .
 ```
 3. Commit the changes:
 ```sh
-git commit -m 'Lesson 03 Example'
+git commit -m 'Lesson 06 Example'
 ```
 4. Push your changes to the remote workbook repository: 
 ```sh

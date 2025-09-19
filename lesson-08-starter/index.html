@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 08 - Intro to Event-Driven Applications</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1 id="page-title">Lesson 08 - Intro to Event-Driven Applications</h1>
+    <p class="tagline">Click, hover, and type to trigger UI updates.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="sec-click">Click</h2>
+      <button id="btn-toggle">Toggle Highlight</button>
+      <button id="btn-message">Change Message</button>
+      <p id="message">Initial message…</p>
+    </section>
+
+    <section>
+      <h2 id="sec-hover">Mouseover / Mouseout</h2>
+      <div id="hover-card" class="card">
+        <img src="/javascript-logo.png" alt="Sample" width="180" height="180" />
+        <p class="hint">Hover over this card</p>
+        <p id="hover-status" class="muted">Status: none</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="sec-key">Keydown</h2>
+      <p class="muted">Type anywhere on the page.</p>
+      <div id="key-output" class="output">Last key: (none)</div>
+    </section>
+
+    <section>
+      <h2 id="sec-delegate">Event Delegation</h2>
+      <ul id="list" class="list">
+        <li data-id="1">Item 1</li>
+        <li data-id="2">Item 2</li>
+        <li data-id="3">Item 3</li>
+      </ul>
+      <div id="selection" class="output">Selected: (none)</div>
+    </section>
+  </main>
+
+  <footer>
+    <small id="footer-note">&copy;2025 Front End Fundamentals</small>
+  </footer>
+</body>
+
+</html>
