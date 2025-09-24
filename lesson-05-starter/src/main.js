@@ -107,6 +107,8 @@ updateHTML('.feature', `This is updated
 
 setAttr('#hero-img', 'title', 'A hover title from JS');
 
+setStyle('#hero-img', { borderWidth: '5px', borderStyle: 'dashed' });
+
 // 6. Footer text tweak (demonstrate class toggle & style change)
 
 // Require innerHTML here to render the &copy; entity correctly
