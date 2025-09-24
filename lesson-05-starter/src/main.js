@@ -82,6 +82,20 @@ function setAttr(selector, name, value) {
   el.setAttribute(name, value);
 }
 
+function setStyle(selector, styleObj = {}) {
+  const el = document.querySelector(selector);
+  if (!el) { // checks to see if there's no element
+    console.warn(`No element found for "${selector}"`);
+    return; // if we hit this line nothing after executes
+  }
+  // what were going to do is that we're going to loop through js object
+  // and set those keys to the style of the element
+  // this is a bit advanced you can use this without fully understanding so far.
+  Object.entries(styleObj).forEach(([k, v]) => {
+    el.style[k] = v;
+  });
+}
+
 // 5. Use helpers to perform simple tasks
 // we're passing concrete values to the function
 updateText('h2', 'Updated with updateText function');
