@@ -113,7 +113,13 @@ setStyle('#hero-img', { borderWidth: '5px', borderStyle: 'dashed' });
 updateText('gary', 'this does not exist');
 
 // 6. Footer text tweak (demonstrate class toggle & style change)
+// one thing that's a special attribute is classes
+// classes are used to apply style so you're going to have many them
+// on our elements there's a special attribute called
+// classList that you can add and remove them
+footerNote.classList.add('footer-strong');
 
 // Require innerHTML here to render the &copy; entity correctly
+footerNote.innerHTML = `&copy; 2025 Frontend fundamentals`;
 
 // 7. Null-safety tip: check selections before using them

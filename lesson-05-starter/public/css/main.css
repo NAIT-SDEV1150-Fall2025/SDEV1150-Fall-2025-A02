@@ -58,6 +58,7 @@ header {
   padding: 0.25rem 0.5rem;
 }
 
+/* this is a class that we've added. */
 .footer-strong {
   color: var(--accent);
   font-weight: 700;
