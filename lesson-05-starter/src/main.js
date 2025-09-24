@@ -38,11 +38,13 @@ titleEl.textContent = 'Using the DOM in Javascript';
 dynamicBox.innerHTML = `<p class="desc">
   This was injected with <em>innerHTML</em>. <br/>
   You can add markup to this <strong>like so</strong>
-</p>
-`;
-
+</p>`;
 
 // 3. Attributes & styles
+// let's change the border color of the image.
+heroImg.style.borderColor = 'green';
+// let's also change the alt attribute of the hero img
+heroImg.setAttribute('alt', 'Modified by the javascript');
 
 // 4. Create small helper functions for reuse
 
