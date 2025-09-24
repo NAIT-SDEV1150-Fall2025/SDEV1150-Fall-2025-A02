@@ -128,3 +128,8 @@ footerNote.classList.remove('wow-cool');
 footerNote.innerHTML = `&copy; 2025 Frontend fundamentals`;
 
 // 7. Null-safety tip: check selections before using them
+// this is the technique that we used in the functions here
+const testElement = document.querySelector('#i-am-not-real');
+if (!testElement) {
+  console.warn('Element with selector "#i-am-not-real" does not exist');
+}
