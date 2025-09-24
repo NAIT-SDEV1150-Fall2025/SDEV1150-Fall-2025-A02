@@ -109,6 +109,9 @@ setAttr('#hero-img', 'title', 'A hover title from JS');
 
 setStyle('#hero-img', { borderWidth: '5px', borderStyle: 'dashed' });
 
+// let's do an example for what happens when we can't find an element
+updateText('gary', 'this does not exist');
+
 // 6. Footer text tweak (demonstrate class toggle & style change)
 
 // Require innerHTML here to render the &copy; entity correctly
