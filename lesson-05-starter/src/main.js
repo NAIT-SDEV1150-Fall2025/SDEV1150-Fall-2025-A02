@@ -119,6 +119,11 @@ updateText('gary', 'this does not exist');
 // classList that you can add and remove them
 footerNote.classList.add('footer-strong');
 
+// let's add a few classes that don't do anything
+footerNote.classList.add('js-fun', 'wow-cool');
+// you can also use classList.remove to remove those pieces
+footerNote.classList.remove('wow-cool');
+
 // Require innerHTML here to render the &copy; entity correctly
 footerNote.innerHTML = `&copy; 2025 Frontend fundamentals`;
 
