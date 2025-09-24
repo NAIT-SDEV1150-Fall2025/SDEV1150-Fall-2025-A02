@@ -42,11 +42,13 @@ dynamicBox.innerHTML = `<p class="desc">
 
 // 3. Attributes & styles
 // let's change the border color of the image.
-heroImg.style.borderColor = 'green';
+heroImg.style.borderColor = '#451202';
 // let's also change the alt attribute of the hero img
 heroImg.setAttribute('alt', 'Modified by the javascript');
 
 // 4. Create small helper functions for reuse
+// we're going to do this after the break
+// this is going to be handy for your assignment future examples
 
 // 5. Use helpers to perform simple tasks
 
