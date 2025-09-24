@@ -71,6 +71,17 @@ function updateHTML(selector, html) {
   el.innerHTML = html;
 }
 
+function setAttr(selector, name, value) {
+  // selecting the element is the same as before.
+  const el = document.querySelector(selector);
+  if (!el) { // checks to see if there's no element
+    console.warn(`No element found for "${selector}"`);
+    return; // if we hit this line nothing after executes
+  }
+  // is that we need to use the setAttribute on the element
+  el.setAttribute(name, value);
+}
+
 // 5. Use helpers to perform simple tasks
 // we're passing concrete values to the function
 updateText('h2', 'Updated with updateText function');
@@ -79,6 +90,8 @@ updateText('h2', 'Updated with updateText function');
 updateHTML('.feature', `This is updated
   <strong style="color: red;">with our updateHTML function</strong>
 `);
+
+setAttr('#hero-img', 'title', 'A hover title from JS');
 
 // 6. Footer text tweak (demonstrate class toggle & style change)
 
