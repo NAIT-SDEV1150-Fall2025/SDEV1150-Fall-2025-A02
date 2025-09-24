@@ -29,6 +29,18 @@ console.log('values', {
 });
 
 // 2. textContent vs innerHTML
+// text content only modifies the text of an element
+// you can't modify the html using this technique
+titleEl.textContent = 'Using the DOM in Javascript';
+
+// let's modify the dynamicBox innerHTML and see what the difference
+// is if i make it text content.
+dynamicBox.innerHTML = `<p class="desc">
+  This was injected with <em>innerHTML</em>. <br/>
+  You can add markup to this <strong>like so</strong>
+</p>
+`;
+
 
 // 3. Attributes & styles
 
