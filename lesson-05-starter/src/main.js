@@ -13,12 +13,14 @@ to do this we're going to use the querySelector
 const titleEl = document.querySelector('#page-title');
 const taglineEl = document.querySelector('.tagline');
 const heroImg = document.querySelector('#hero-img');
+const heroCaption = document.querySelector('#hero-caption');
 
 // print out all values to the console
 console.log('values', {
   titleEl,
   taglineEl,
   heroImg,
+  heroCaption,
 });
 
 // 2. textContent vs innerHTML
