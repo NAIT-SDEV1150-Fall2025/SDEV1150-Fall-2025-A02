@@ -51,7 +51,8 @@ heroImg.setAttribute('alt', 'Modified by the javascript');
 // this is going to be handy for your assignment future examples
 function updateText(selector, text) {
   // we're going to use the arguments that we passed in to
-  // select an element
+  // select an element. Note arguments are like variables that
+  // are passed into a function.
   const el = document.querySelector(selector);
   if (!el) { // checks to see if there's no element
     console.warn(`No element found for "${selector}"`);
@@ -60,10 +61,25 @@ function updateText(selector, text) {
   el.textContent = text; // updating the text of the selected element
 }
 
-
+function updateHTML(selector, html) {
+  // we need to select
+  const el = document.querySelector(selector);
+  if (!el) { // checks to see if there's no element
+    console.warn(`No element found for "${selector}"`);
+    return; // if we hit this line nothing after executes
+  }
+  el.innerHTML = html;
+}
 
 // 5. Use helpers to perform simple tasks
+// we're passing concrete values to the function
 updateText('h2', 'Updated with updateText function');
+
+// let's update the first feature list item
+updateHTML('.feature', `This is updated
+  <strong style="color: red;">with our updateHTML function</strong>
+`);
+
 // 6. Footer text tweak (demonstrate class toggle & style change)
 
 // Require innerHTML here to render the &copy; entity correctly
