@@ -14,6 +14,9 @@ const titleEl = document.querySelector('#page-title');
 const taglineEl = document.querySelector('.tagline');
 const heroImg = document.querySelector('#hero-img');
 const heroCaption = document.querySelector('#hero-caption');
+// one min select the footer-note and the dynamic-box
+const dynamicBox = document.querySelector('#dynamic-box');
+const footerNote = document.querySelector('#footer-note');
 
 // print out all values to the console
 console.log('values', {
@@ -21,6 +24,8 @@ console.log('values', {
   taglineEl,
   heroImg,
   heroCaption,
+  dynamicBox,
+  footerNote,
 });
 
 // 2. textContent vs innerHTML
