@@ -49,9 +49,21 @@ heroImg.setAttribute('alt', 'Modified by the javascript');
 // 4. Create small helper functions for reuse
 // we're going to do this after the break
 // this is going to be handy for your assignment future examples
+function updateText(selector, text) {
+  // we're going to use the arguments that we passed in to
+  // select an element
+  const el = document.querySelector(selector);
+  if (!el) { // checks to see if there's no element
+    console.warn(`No element found for "${selector}"`);
+    return; // if we hit this line nothing after executes
+  }
+  el.textContent = text; // updating the text of the selected element
+}
+
+
 
 // 5. Use helpers to perform simple tasks
-
+updateText('h2', 'Updated with updateText function');
 // 6. Footer text tweak (demonstrate class toggle & style change)
 
 // Require innerHTML here to render the &copy; entity correctly
