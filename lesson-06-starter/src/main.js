@@ -9,6 +9,8 @@ const dynamicBox = document.querySelector('#dynamic-box');
 const footerNote = document.querySelector('#footer-note');
 
 // 1. Create a new variable for the feature list element
+// select the list element
+let featureList = document.querySelector('#feature-list');
 
 // 2. Add feature list to the displayed elements below
 console.log('Selected elements:', {
@@ -20,8 +22,10 @@ console.log('Selected elements:', {
 // modify it's classList and textContent
 const newLi = document.createElement('li');
 newLi.classList.add('feature');
-
+newLi.textContent = 'Flexible';
 console.log(newLi);
+// we need to attach to the list.
+featureList.appendChild(newLi); // note you can use append as well.
 
 // 4. Add a new item dynamically
 
