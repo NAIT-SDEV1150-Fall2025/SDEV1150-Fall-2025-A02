@@ -74,6 +74,12 @@ featureList.insertBefore(
 );
 
 // 9. Use a timer to add a new item after 3 seconds have passed
+// time in timers in javascript in in milliseconds.
+// so what we're going to is were going add the item after 3 seconds
+const THREE_SECONDS = 3000;
+setTimeout(() => {
+  console.log('hello after 3 seconds');
+}, THREE_SECONDS);
 
 // **** THE FOLLOWING IS EXISTING CODE FROM LESSON 05
 
