@@ -28,6 +28,15 @@ console.log(newLi);
 featureList.appendChild(newLi); // note you can use append as well.
 
 // 4. Add a new item dynamically
+// we're going to modify the text content of all list items
+// with querySelectorAll and loops.
+// we're going to select all items with the class "feature"
+let featureItems = document.querySelectorAll('.feature');
+
+console.log(featureItems); // multiple items in a NodeList.
+// with NodeLists you can loop through each item with
+// forEach (and a function that will execute every iteration.)
+
 
 // 5. Retreive all list items (querySelectorAll) and update their text
 
