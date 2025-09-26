@@ -63,6 +63,15 @@ featureList.removeChild(featureList.firstElementChild);
 featureList.firstElementChild.nextElementSibling.textContent += ' (updated!)';
 
 // 8. Move the last item to the front of the list
+// this is the same access as above but you can always put it in a variable
+// that is more readable and understandable.
+const firstElement = featureList.firstElementChild;
+const lastElement = featureList.lastElementChild;
+
+featureList.insertBefore(
+  lastElement,
+  firstElement,
+);
 
 // 9. Use a timer to add a new item after 3 seconds have passed
 
