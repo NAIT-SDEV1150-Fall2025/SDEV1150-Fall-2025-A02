@@ -16,6 +16,12 @@ console.log('Selected elements:', {
 });
 
 // 3. Modify list content
+// to add a list element, we're going to create an item
+// modify it's classList and textContent
+const newLi = document.createElement('li');
+newLi.classList.add('feature');
+
+console.log(newLi);
 
 // 4. Add a new item dynamically
 
