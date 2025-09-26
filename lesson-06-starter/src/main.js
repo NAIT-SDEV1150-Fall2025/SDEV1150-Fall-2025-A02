@@ -36,6 +36,8 @@ let featureItems = document.querySelectorAll('.feature');
 console.log(featureItems); // multiple items in a NodeList.
 // with NodeLists you can loop through each item with
 // forEach (and a function that will execute every iteration.)
+// debugger; if you want to see the functionality (step the forEach)
+// and uncomment the debugger line.
 featureItems.forEach((element, index) => { // a function syntax
   console.log(index, element);
   // we're going to add the index + 1 to the text content
