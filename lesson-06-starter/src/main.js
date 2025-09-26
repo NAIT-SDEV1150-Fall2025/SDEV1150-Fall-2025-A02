@@ -41,15 +41,26 @@ console.log(featureItems); // multiple items in a NodeList.
 // debugger; if you want to see the functionality (step the forEach)
 // and uncomment the debugger line.
 featureItems.forEach((element, index) => { // a function syntax
-  console.log(index, element);
+  // console.log(index, element);
   // we're going to add the index + 1 to the text content
   // of the element
   element.textContent = `feature: ${index + 1} ${element.textContent}`;
 });
 
 // 6. Removing the first item from the list using DOM relationships to find it
+// you can access the first element child of parent by using the
+// .firstElementChild attribute
+console.log('The first element child of the list is');
+console.log(featureList.firstElementChild);
+
+// we're going to remove it.
+featureList.removeChild(featureList.firstElementChild);
 
 // 7. Update the second item using nextElementSibling
+// we're going to see that the first element child is now different
+// console.log(featureList.firstElementChild);
+// we can use .nextElementSibling to access the next sibling (going downwards)
+featureList.firstElementChild.nextElementSibling.textContent += ' (updated!)';
 
 // 8. Move the last item to the front of the list
 
