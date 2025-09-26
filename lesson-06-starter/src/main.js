@@ -78,7 +78,14 @@ featureList.insertBefore(
 // so what we're going to is were going add the item after 3 seconds
 const THREE_SECONDS = 3000;
 setTimeout(() => {
-  console.log('hello after 3 seconds');
+  // console.log('hello after 3 seconds');
+  // add an item to the list.
+  const liAfterThree = document.createElement('li');
+  liAfterThree.classList.add('feature');
+  liAfterThree.textContent = 'Added after three seconds.';
+  console.log(liAfterThree);
+  // we need to attach to the list.
+  featureList.appendChild(liAfterThree);
 }, THREE_SECONDS);
 
 // **** THE FOLLOWING IS EXISTING CODE FROM LESSON 05
