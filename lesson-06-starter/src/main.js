@@ -18,6 +18,8 @@ console.log('Selected elements:', {
 });
 
 // 3. Modify list content
+
+// 4. Add a new item dynamically
 // to add a list element, we're going to create an item
 // modify it's classList and textContent
 const newLi = document.createElement('li');
@@ -27,7 +29,7 @@ console.log(newLi);
 // we need to attach to the list.
 featureList.appendChild(newLi); // note you can use append as well.
 
-// 4. Add a new item dynamically
+// 5. Retreive all list items (querySelectorAll) and update their text
 // we're going to modify the text content of all list items
 // with querySelectorAll and loops.
 // we're going to select all items with the class "feature"
@@ -44,8 +46,6 @@ featureItems.forEach((element, index) => { // a function syntax
   // of the element
   element.textContent = `feature: ${index + 1} ${element.textContent}`;
 });
-
-// 5. Retreive all list items (querySelectorAll) and update their text
 
 // 6. Removing the first item from the list using DOM relationships to find it
 
