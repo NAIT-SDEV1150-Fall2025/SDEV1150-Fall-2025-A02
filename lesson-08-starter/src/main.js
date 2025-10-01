@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const btnMessage = document.querySelector('#btn-message');
   const message = document.querySelector('#message');
   const hoverCard = document.querySelector('#hover-card');
+  const hoverStatus = document.querySelector('#hover-status');
   const keyOutput = document.querySelector('#key-output');
   const list = document.querySelector('#list');
   const selection = document.querySelector('#selection');
@@ -33,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     btnMessage,
     message,
     hoverCard,
+    hoverStatus,
     keyOutput,
     list,
     selection,
@@ -68,6 +70,12 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   // 5. mouseover / mouseout: display hover status on the card
+  // the mouseover and mouseout event fire when you move
+  // your mouse over it.
+  hoverCard.addEventListener('mouseover', () => {
+
+  });
+
 
   // 6. keydown: show last key pressed (global listener)
 
