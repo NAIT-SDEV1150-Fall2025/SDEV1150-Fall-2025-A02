@@ -55,6 +55,7 @@ console.log(featureList.firstElementChild);
 
 // we're going to remove it.
 featureList.removeChild(featureList.firstElementChild);
+// you can also use featureList.firstElementChild.remove() on the element itself
 
 // 7. Update the second item using nextElementSibling
 // we're going to see that the first element child is now different
