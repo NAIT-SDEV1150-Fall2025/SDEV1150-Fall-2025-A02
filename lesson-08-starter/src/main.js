@@ -45,6 +45,13 @@ window.addEventListener('DOMContentLoaded', () => {
     // on classList there's a function called toggle
     document.body.classList.toggle('highlight');
     // we're check to see if that element contains the class (with classList)
+    const on = document.body.classList.contains('highlight');
+    // on is going to be a true or false
+    if (on) { // you can also do if (on === true) { ... }
+      btnToggle.textContent = 'Highlight is ON!';
+    } else {
+      btnToggle.textContent = 'Highlight is OFF!';
+    }
   });
 
   // 4. click: change message textContent (no HTML parsing)
