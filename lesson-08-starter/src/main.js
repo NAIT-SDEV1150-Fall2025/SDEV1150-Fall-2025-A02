@@ -57,6 +57,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // this code won't execute.
 
   // 4. click: change message textContent (no HTML parsing)
+  // on the btnElement change the message element text
+  btnMessage.addEventListener('click', () => {
+    // the date object
+    console.log(new Date());
+    // get the time of an element slightly formatted
+    const timeString = new Date().toLocaleDateString();
+    // update the element
+    message.textContent = `Updated at ${timeString}`;
+  });
 
   // 5. mouseover / mouseout: display hover status on the card
 
