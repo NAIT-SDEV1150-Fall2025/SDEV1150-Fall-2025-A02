@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // the date object
     console.log(new Date());
     // get the time of an element slightly formatted
-    const timeString = new Date().toLocaleDateString();
+    const timeString = new Date().toLocaleTimeString();
     // update the element
     message.textContent = `Updated at ${timeString}`;
   });
