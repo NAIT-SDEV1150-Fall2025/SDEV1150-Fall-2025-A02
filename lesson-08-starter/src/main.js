@@ -75,6 +75,11 @@ window.addEventListener('DOMContentLoaded', () => {
   hoverCard.addEventListener('mouseover', () => {
     hoverStatus.textContent = 'Status: HOVERING';
   });
+  // note: mouseover and mouseout are different events
+  // we need to make a second event listener for this.
+  hoverCard.addEventListener('mouseout', () => {
+    hoverStatus.textContent = 'Status: NOT HOVERING';
+  });
 
   // 6. keydown: show last key pressed (global listener)
 
