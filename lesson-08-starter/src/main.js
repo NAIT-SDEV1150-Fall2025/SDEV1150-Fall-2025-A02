@@ -1,6 +1,9 @@
 console.log('Lesson 08 starter loaded');
 
 // 1. load event (document ready) - NOTE this is unnecessary if using `defer` in the script tag or using module type
+// the window contains information about the browser
+// the page and where you're at.
+console.log(window);
 
 // 2. Selecting elements
 
