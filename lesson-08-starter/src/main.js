@@ -84,6 +84,4 @@ window.addEventListener('DOMContentLoaded', () => {
   // 6. keydown: show last key pressed (global listener)
 
   // 7. Event delegation: one listener on the <ul> for all <li> elements
-
 });
-
