@@ -53,6 +53,8 @@ window.addEventListener('DOMContentLoaded', () => {
       btnToggle.textContent = 'Highlight is OFF!';
     }
   });
+  // if I click any where else on the page than this button
+  // this code won't execute.
 
   // 4. click: change message textContent (no HTML parsing)
 
