@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 09 - Event-Driven UI Demo</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Lesson 09 - Event-Driven UI Demo</h1>
+  </header>
+
+  <main>
+    <section id="propagation-demo">
+      <h2>Event Propagation</h2>
+      <div id="outer" class="box">
+        Outer Div
+        <div id="inner" class="box">Inner Div
+          <button id="btn-propagate">Click Me</button>
+        </div>
+      </div>
+      <p id="log"></p>
+    </section>
+
+    <section id="gallery">
+      <h2>Image Gallery</h2>
+      <div class="thumbnails">
+        <img src="/assets/gallery/road-trip1.jpg" alt="Image 1" data-id="1" />
+        <img src="/assets/gallery/road-trip2.jpg" alt="Image 2" data-id="2" />
+        <img src="/assets/gallery/road-trip3.jpg" alt="Image 3" data-id="3" />
+      </div>
+      <div class="viewer">
+        <img id="main-image" src="/assets/gallery/road-trip1.jpg" alt="Main display" />
+        <button id="close-viewer">Close</button>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

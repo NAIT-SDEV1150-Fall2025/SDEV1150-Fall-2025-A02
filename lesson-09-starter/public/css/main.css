@@ -1,0 +1,57 @@
+body {
+  margin: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.box {
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+}
+
+#log {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.thumbnails img {
+  width: 80px;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+.viewer {
+  margin-top: 1rem;
+  display: none;
+  position: relative;
+}
+
+.viewer.show {
+  display: block;
+}
+
+.viewer img {
+  max-width: 300px;
+}
+
+.viewer #close-viewer {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}

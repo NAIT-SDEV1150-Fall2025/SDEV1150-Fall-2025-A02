@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 10 - Form Event Handling</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Lesson 10 - Form Event Handling</h1>
+    <p class="muted">Submit the form without a page reload</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="form-title">
+      <h2 id="form-title">Contact Form</h2>
+      <form id="contact-form">
+        <fieldset>
+          <legend>Basic Info</legend>
+          <label>
+            Full Name
+            <input type="text" name="fullName" placeholder="NAIT Student">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="name@example.com">
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Front End Skill Level</legend>
+          <div class="group">
+            <label><input type="radio" name="plan" value="junior" checked> Junior</label>
+            <label><input type="radio" name="plan" value="intermediate"> Intermediate</label>
+            <label><input type="radio" name="plan" value="advanced"> Advanced</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Skills (choose any)</legend>
+          <div class="group">
+            <label><input type="checkbox" name="topics" value="javascript"> JavaScript</label>
+            <label><input type="checkbox" name="topics" value="css"> CSS</label>
+            <label><input type="checkbox" name="topics" value="html"> HTML</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>About You</legend>
+          <label>
+            Short Bio
+            <textarea name="bio" rows="3" placeholder="A little about yourself..."></textarea>
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit">Submit</button>
+          <button type="reset" id="reset-btn">Reset</button>
+        </div>
+      </form>
+
+      <div id="result" class="output" aria-live="polite">Awaiting submission…</div>
+    </section>
+  </main>
+</body>
+
+</html>

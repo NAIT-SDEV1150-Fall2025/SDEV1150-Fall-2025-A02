@@ -1,0 +1,95 @@
+:root {
+  --bg: #f6f8fa;
+  --text: #222;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #0d6efd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2,
+legend {
+  margin: 0 0 0.5rem;
+}
+
+header {
+  margin-bottom: 1.25rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 680px;
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.group {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  font-size: 1rem;
+  background: #fff;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+button[type="submit"] {
+  border-color: var(--accent);
+}
+
+.output {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  background: #fff;
+  white-space: pre-wrap;
+}
