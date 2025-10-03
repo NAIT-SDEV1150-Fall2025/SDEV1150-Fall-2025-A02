@@ -18,8 +18,17 @@ outer.addEventListener('click', outerClick);
 // 2.2 Inner div - using an anonymous function
 // to add the text `Inner clicked (captured) |`
 // the inner div when clicked.
+inner.addEventListener('click', function () { // is equivalent to () => { in case you were wondering
+  log.textContent += `Inner clicked (captured) |`;
+});
 
 // 2.3 Button - using an arrow function
+// we're going to see if we stopProgatation it will not bubble to the parents.
+button.addEventListener('click', (event) => {
+  // stop the propagation (a method on the event object)
+  event.stopPropagation();
+  log.textContent += `Button clicked (captured) |`;
+});
 
 // ============== Gallery demo
 
