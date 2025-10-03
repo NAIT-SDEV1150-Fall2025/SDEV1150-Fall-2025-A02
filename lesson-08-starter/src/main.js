@@ -65,6 +65,8 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log(new Date());
     // get the time of an element slightly formatted
     const timeString = new Date().toLocaleTimeString();
+    // we're going to use the Date object more s othat we can
+    // use time in our applciation.
     // update the element
     message.textContent = `Updated at ${timeString}`;
   });
