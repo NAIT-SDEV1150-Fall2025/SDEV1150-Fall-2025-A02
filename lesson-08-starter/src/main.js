@@ -84,6 +84,9 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   // 6. keydown: show last key pressed (global listener)
+  // create an event listener that listens to keydown event
+  // to pass the "event" object to the function and use
+  // event.key to populate the keyOutput.
 
   // 7. Event delegation: one listener on the <ul> for all <li> elements
 });
