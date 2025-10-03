@@ -13,10 +13,11 @@ const button = document.getElementById('btn-propagate');
 function outerClick() { // another way to write a function
   log.textContent += `Outer clicked (captured) |`; // are going to continuous add to the log.
 }
-// if you use the above function in an event listener, you need to pass by reference (just the definition)
+// if you use the above function in an event listener, you need to pass by reference(just the definition)
 outer.addEventListener('click', outerClick);
 // 2.2 Inner div - using an anonymous function
 // to add the text `Inner clicked (captured) |`
+// the inner div when clicked.
 
 // 2.3 Button - using an arrow function
 
