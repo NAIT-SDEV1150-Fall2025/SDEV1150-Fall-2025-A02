@@ -87,6 +87,36 @@ window.addEventListener('DOMContentLoaded', () => {
   // create an event listener that listens to keydown event
   // to pass the "event" object to the function and use
   // event.key to populate the keyOutput.
+  // instead of an element, we're going to add the event listener
+  // to the document itself.
+  document.addEventListener('keydown', (event) => {
+    // we're going to talk about this more but the event object
+    // is a special object that javascript provides us
+    // that has a lot of information about the event.
+    // console.log(event);
+    // on the event object we're going to event.key
+    keyOutput.textContent = `Last key: ${event.key}`;
+  });
 
   // 7. Event delegation: one listener on the <ul> for all <li> elements
+  list.addEventListener('click', (event) => {
+    // remember the event object gives us more infor on the event.
+    // we're going to talk about the event target.
+    // this is the most specific element that the event
+    // is happening on.
+    console.log(event.target);
+    // note here that if I click any of the items, I'm
+    // still clicking the list.
+    // we're only going to do something if the tagName is
+    // a list item (li)
+    console.log(event.target.tagName);
+
+    if (event.target.tagName === 'LI') {
+      // I'm going to add the active class
+      // on the event.target element
+      event.target.classList.add('active');
+      // we're going to remove the active class from
+      // existing items we'll see how this looks after.
+    }
+  });
 });

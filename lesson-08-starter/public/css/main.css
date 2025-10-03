@@ -75,7 +75,7 @@ button {
   border-radius: 6px;
   cursor: pointer;
 }
-
+/* this is going to add the style to the element */
 .list li.active {
   border-color: var(--accent);
   box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.15);
