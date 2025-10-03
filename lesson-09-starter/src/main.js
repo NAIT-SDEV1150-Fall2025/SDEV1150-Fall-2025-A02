@@ -3,7 +3,7 @@ console.log('Lesson 10 starter loaded');
 // ============== Propagation demo
 
 // 1. Select required elements
-
+const log = document.getElementById('log');
 // 2. Add event listeners
 
 // 2.1 Outer div - using a named function
