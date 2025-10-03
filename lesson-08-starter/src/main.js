@@ -112,11 +112,18 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log(event.target.tagName);
 
     if (event.target.tagName === 'LI') {
+      // we're going to remove the active class from
+      // existing items we'll see how this looks after.
+      // we can do this with querySelectorAll
+      const activeItems = document.querySelectorAll('li.active');
+      // loop through each and remove the active class
+      activeItems.forEach((element) => {
+        // remove the active class from those elements
+        element.classList.remove('active');
+      });
       // I'm going to add the active class
       // on the event.target element
       event.target.classList.add('active');
-      // we're going to remove the active class from
-      // existing items we'll see how this looks after.
     }
   });
 });
