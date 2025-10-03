@@ -28,6 +28,8 @@ button.addEventListener('click', (event) => {
   // stop the propagation (a method on the event object)
   event.stopPropagation();
   log.textContent += `Button clicked (captured) |`;
+  // this is the only function that fires it does not bubble up to the event
+  // listeners of the inner and outer divs.
 });
 
 // ============== Gallery demo
