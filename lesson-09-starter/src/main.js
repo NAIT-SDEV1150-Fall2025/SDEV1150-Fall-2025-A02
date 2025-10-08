@@ -57,13 +57,17 @@ thumbnails.addEventListener('click', (event) => {
   console.log(event.target.tagName);
   // check to see if the tagName is IMG
   if (event.target.tagName === 'IMG') {
-    // show the viewer
+    // add the class of show to the viewer
+    // to show the viewer
+    viewer.classList.add('show');
+    // we want the thumbnails image
+    let imagePath = event.target.getAttribute('src');
+    // check the path first
+    // console.log(imagePath);
+    mainImage.setAttribute('src', imagePath);
   }
 });
 // if it is setAttribute of the mainImage to event.target.src
-// add the class of show to the viewer
-
-
 
 // 2.2 Close button - using an arrow function
 
