@@ -38,7 +38,7 @@ button.addEventListener('click', (event) => {
 const thumbnails = document.querySelector('.thumbnails');
 const mainImage = document.querySelector('#main-image');
 const viewer = document.querySelector('.viewer');
-const closeBtn = document.querySelector('#closer-viewer');
+const closeBtn = document.querySelector('#close-viewer');
 
 // 2. Add event listeners
 
@@ -71,6 +71,11 @@ thumbnails.addEventListener('click', (event) => {
 
 // 2.2 Close button - using an arrow function
 // close the image!
+// add event listener to the close button
+closeBtn.addEventListener('click', () => {
+  // remove the show the class
+  viewer.classList.remove('show');
+});
 
 // Student TODO: Add event listener to document, which closes
 // the viewer when the Escape key is pressed
