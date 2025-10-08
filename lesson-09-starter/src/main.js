@@ -45,7 +45,21 @@ const closeBtn = document.querySelector('#closer-viewer');
 // 2.1 Thumbnails container - using an arrow function
 // I want you folks to add an event listener on the
 // the thumbnails
-// check to see if the tagName is IMG
+thumbnails.addEventListener('click', (event) => {
+  // remember that the event target for a click is the most specific
+  // element that was clicked.
+  // console.log(event.target);
+  // the tagname is on the element
+  // if you ever want to see all of the functions on an element
+  // can use
+  // console.log(event.target.__proto__);
+  // we are going to use the tagName
+  console.log(event.target.tagName);
+  // check to see if the tagName is IMG
+  if (event.target.tagName === 'IMG') {
+    // show the viewer
+  }
+});
 // if it is setAttribute of the mainImage to event.target.src
 // add the class of show to the viewer
 
