@@ -70,6 +70,7 @@ thumbnails.addEventListener('click', (event) => {
 // if it is setAttribute of the mainImage to event.target.src
 
 // 2.2 Close button - using an arrow function
+// close the image!
 
 // Student TODO: Add event listener to document, which closes
 // the viewer when the Escape key is pressed
