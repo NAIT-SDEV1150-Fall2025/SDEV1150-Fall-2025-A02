@@ -20,7 +20,7 @@ form.addEventListener('submit', (event) => {
   // in this class we don't want the page to execute the
   // default action of the form when I click submit
   // we can do this with event.preventDefault()
-  event.preventDefault();
+  event.preventDefault(); // this is needed on every form.
   // the main thing you want to do with forms is get the form data
   // and do something with that form data.
   const data = serializeForm(form);
