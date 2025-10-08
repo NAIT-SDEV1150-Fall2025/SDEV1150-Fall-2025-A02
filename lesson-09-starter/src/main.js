@@ -35,10 +35,21 @@ button.addEventListener('click', (event) => {
 // ============== Gallery demo
 
 // 1. Select required elements
+const thumbnails = document.querySelector('.thumbnails');
+const mainImage = document.querySelector('#main-image');
+const viewer = document.querySelector('.viewer');
+const closeBtn = document.querySelector('#closer-viewer');
 
 // 2. Add event listeners
 
 // 2.1 Thumbnails container - using an arrow function
+// I want you folks to add an event listener on the
+// the thumbnails
+// check to see if the tagName is IMG
+// if it is setAttribute of the mainImage to event.target.src
+// add the class of show to the viewer
+
+
 
 // 2.2 Close button - using an arrow function
 
