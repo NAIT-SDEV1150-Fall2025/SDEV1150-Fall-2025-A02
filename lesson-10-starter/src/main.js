@@ -18,14 +18,14 @@ function serializeForm(formElement) {
   // get the email and the bio from the form.
   // let email = formElement.elements.email;
   // let bio = formElement.elements.bio;
-  // let's talk about destructuring because you're
+  // below is the same as the above just done in a
+  // different with destructuring. You're
   // going to see it elsewhere so the abve you can
   // do multiple assignment with object destructuring
   let { fullName, bio, email } = formElement.elements;
   console.log(fullName.value);
   console.log(bio.value);
   console.log(email.value);
-
 }
 // Access values using both form.elements and query selectors
 
