@@ -43,7 +43,7 @@ function serializeForm(formElement) {
   // 2. we're going to convert to an array
   // we need to do this because a NodeList doesn't have map.
   let topicElementsArray = Array.from(formElement.querySelectorAll('input[name="topics"]:checked'));
-  console.log('topicElementsArray', topicElementsArray);
+  // console.log('topicElementsArray', topicElementsArray);
 
   // just an array note: Array.from converts non arrays to arrays.
   // 3. we're going to use a new loop called map, it behaves the same way as
@@ -53,7 +53,7 @@ function serializeForm(formElement) {
     // you're returning the modified value to the new array
     return topicElement.value;
   });
-  console.log('topics', topics);
+  // console.log('topics', topics);
 
   return {
     fullName: fullName.value,
@@ -84,7 +84,20 @@ form.addEventListener('submit', (event) => {
   // const data = serializeForm(event.target);
   // because the event.target is the form in this instance.
   console.log('data', data);
-});
 
+  // use your knowledge of textContent and print to the page.
+  result.textContent = `Form Submission Recieved:
+    - Name: ${data.fullName || '(none)'}
+    - Email: ${data.email || '(none)'}
+    - Skill: ${data.plan || '(none)'}
+    - Strengths ${data.topics.length ? 'There are topics' : '(none)'}
+    - Bio: ${data.bio || '(none)'}
+    - Time: ${data.submittedAt}
+    `;
+  // about what's going on in the strengths this is a called a ternary
+  // what we're doing here is a mini if statement
+  // condition(true or false) ? trueconditioncode : falseconditioncode
+  // in javascript you can join
+})
 
 // 4. Handle form reset - reset the result area text when the form is reset
