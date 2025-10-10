@@ -32,14 +32,35 @@ function serializeForm(formElement) {
   // a radio you can only select a single item.
   let plan = formElement.elements.plan; // plan is the name of the input
   // since it's a single item you can just get the value.
-  console.log(plan.value);
+  // console.log(plan.value);
   // note: the value is equivalent to the value in the input.
+
+  // we're going to do a few steps in one line.
+  // 1. we're going to select the inputs with that element (querySelectorAll)
+  // the css selector that you folks will use input[name="topics"]:checked
+  // console.log(formElement.querySelectorAll('input[name="topics"]:checked'));
+  // this is selecting all elements that are checked.
+  // 2. we're going to convert to an array
+  // we need to do this because a NodeList doesn't have map.
+  let topicElementsArray = Array.from(formElement.querySelectorAll('input[name="topics"]:checked'));
+  console.log('topicElementsArray', topicElementsArray);
+
+  // just an array note: Array.from converts non arrays to arrays.
+  // 3. we're going to use a new loop called map, it behaves the same way as
+  // a forEach loop but you can return a modified array. This is a technique
+  // that you'll use a ton in the second level of this program.
+  let topics = topicElementsArray.map((topicElement) => {
+    // you're returning the modified value to the new array
+    return topicElement.value;
+  });
+  console.log('topics', topics);
 
   return {
     fullName: fullName.value,
     bio: bio.value,
     email: email.value,
     plan: plan.value,
+    topics: topics
   };
 }
 // Access values using both form.elements and query selectors
@@ -60,7 +81,7 @@ form.addEventListener('submit', (event) => {
   // a note the above line is equivalent to
   // const data = serializeForm(event.target);
   // because the event.target is the form in this instance.
-  console.log('data', data);
+  // console.log('data', data);
 });
 
 
