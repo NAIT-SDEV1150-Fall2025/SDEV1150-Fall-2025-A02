@@ -23,9 +23,24 @@ function serializeForm(formElement) {
   // going to see it elsewhere so the abve you can
   // do multiple assignment with object destructuring
   let { fullName, bio, email } = formElement.elements;
-  console.log(fullName.value);
-  console.log(bio.value);
-  console.log(email.value);
+  // the way that it's connecting the name to the varaible
+  // is that the name is the same as the property/attribute
+  // on the formElement.elements
+
+  // let's select select the plan
+  // this is a radio which is a bit different
+  // a radio you can only select a single item.
+  let plan = formElement.elements.plan; // plan is the name of the input
+  // since it's a single item you can just get the value.
+  console.log(plan.value);
+  // note: the value is equivalent to the value in the input.
+
+  return {
+    fullName: fullName.value,
+    bio: bio.value,
+    email: email.value,
+    plan: plan.value,
+  };
 }
 // Access values using both form.elements and query selectors
 
@@ -45,7 +60,7 @@ form.addEventListener('submit', (event) => {
   // a note the above line is equivalent to
   // const data = serializeForm(event.target);
   // because the event.target is the form in this instance.
-  // console.log('data', data);
+  console.log('data', data);
 });
 
 
