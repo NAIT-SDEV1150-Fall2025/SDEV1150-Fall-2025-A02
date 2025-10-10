@@ -60,7 +60,7 @@ function serializeForm(formElement) {
     bio: bio.value,
     email: email.value,
     plan: plan.value,
-    topics: topics
+    topics: topics,
   };
 }
 // Access values using both form.elements and query selectors
