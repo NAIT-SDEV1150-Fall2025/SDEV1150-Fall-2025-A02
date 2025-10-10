@@ -7,7 +7,25 @@ const result = document.querySelector('#result');
 // 2. Function to gather and structure form data
 function serializeForm(formElement) {
   // we're going to gather the data from the elements
-  console.log(formElement.elements);
+  // console.log(formElement.elements);
+  // let's get the fullname with the . notation
+  // let fullName = formElement.elements.fullName; // fullName is the "name" attribute on the html element here.
+  // now that we know that this element is defined
+  // console.log(fullName);
+  // you can access the value with .value
+  // console.log(fullName.value);
+
+  // get the email and the bio from the form.
+  // let email = formElement.elements.email;
+  // let bio = formElement.elements.bio;
+  // let's talk about destructuring because you're
+  // going to see it elsewhere so the abve you can
+  // do multiple assignment with object destructuring
+  let { fullName, bio, email } = formElement.elements;
+  console.log(fullName.value);
+  console.log(bio.value);
+  console.log(email.value);
+
 }
 // Access values using both form.elements and query selectors
 
@@ -27,7 +45,8 @@ form.addEventListener('submit', (event) => {
   // a note the above line is equivalent to
   // const data = serializeForm(event.target);
   // because the event.target is the form in this instance.
-  console.log('data', data);
+  // console.log('data', data);
 });
+
 
 // 4. Handle form reset - reset the result area text when the form is reset
