@@ -90,14 +90,21 @@ form.addEventListener('submit', (event) => {
     - Name: ${data.fullName || '(none)'}
     - Email: ${data.email || '(none)'}
     - Skill: ${data.plan || '(none)'}
-    - Strengths ${data.topics.length ? 'There are topics' : '(none)'}
+    - Strengths ${data.topics.length ? data.topics.join(', ') : '(none)'}
     - Bio: ${data.bio || '(none)'}
     - Time: ${data.submittedAt}
     `;
   // about what's going on in the strengths this is a called a ternary
   // what we're doing here is a mini if statement
   // condition(true or false) ? trueconditioncode : falseconditioncode
-  // in javascript you can join
-})
+  // in javascript you can join using a separaton
+  // data.topics.join(', ') will print all of the items
+
+  // note: ternaries and map you'll use more when using frameworks like
+  // react or vue (in the future)
+});
 
 // 4. Handle form reset - reset the result area text when the form is reset
+// I want you to add a "reset" event listener on the form;
+// that will change the result back to "Awaiting submission…"
+// to test enter some values submit it, enter more values, click reset.
