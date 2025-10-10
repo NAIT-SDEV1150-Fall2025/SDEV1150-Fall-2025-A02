@@ -61,6 +61,8 @@ function serializeForm(formElement) {
     email: email.value,
     plan: plan.value,
     topics: topics,
+    // we're going to add the date
+    submittedAt: new Date().toLocaleString(),
   };
 }
 // Access values using both form.elements and query selectors
@@ -81,7 +83,7 @@ form.addEventListener('submit', (event) => {
   // a note the above line is equivalent to
   // const data = serializeForm(event.target);
   // because the event.target is the form in this instance.
-  // console.log('data', data);
+  console.log('data', data);
 });
 
 
