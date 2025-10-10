@@ -108,3 +108,9 @@ form.addEventListener('submit', (event) => {
 // I want you to add a "reset" event listener on the form;
 // that will change the result back to "Awaiting submission…"
 // to test enter some values submit it, enter more values, click reset.
+form.addEventListener('reset', () => {
+  console.log('reset triggered');
+  // the button with the type = reset attibute on html just resets
+  // the form completes
+  result.textContent = 'Awaiting submission…';
+});
