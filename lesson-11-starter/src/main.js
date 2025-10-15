@@ -50,7 +50,7 @@ form.addEventListener('input', (event) => {
   const element = event.target;
   console.log('input event fired on');
   // console.log(element);
-  // console.log(element.name); // name of the element
+  console.log(element.name); // name of the element
   console.log(element.value);
   // remember that this element above will depend on which
   // input you are changing!
@@ -74,7 +74,23 @@ form.addEventListener('input', (event) => {
   }
 
   // 1.2 custom validation for bio (minimum length)
-
+  // I want you to check the bio, add a message if it's less than 40 characters
+  // and that message can say "Bio is too short (must be 40 characters)"
+  // use what you've learned to do this.
+  // first step is to check if it's the correct element
+  if (element.name == 'bio') {
+    // I want to check to see if the length
+    // is greater than 40
+    const MIN_LENGTH = 40;
+    const bioLength = element.value.trim().length;
+    if (bioLength < MIN_LENGTH) {
+      // if my bio is less than the min case we need to handle it
+      element.setCustomValidity('Bio is too short (must be 40 characters)');
+    } else {
+      // this is the valid case
+      element.setCustomValidity('');
+    }
+  }
   // 1.3 custom validation for email (basic pattern check)
 
   // 1.4 report the validity status to the user
