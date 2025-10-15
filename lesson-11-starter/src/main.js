@@ -95,7 +95,15 @@ form.addEventListener('input', (event) => {
   // I want you to check to if the string as an @ in it.
   // remember that strings are character arrays NOTE!
   // show an error message that says "invalid email".
-  if (element.name === 'email')
+  if (element.name === 'email') {
+    // for character arrays you can check to see if a string includes
+    // another with .includes!
+    if (!element.value.includes('@')) {
+      element.setCustomValidity('Invalid email');
+    } else {
+      element.setCustomValidity('');
+    }
+  }
 
   // 1.4 report the validity status to the user
   element.reportValidity();
