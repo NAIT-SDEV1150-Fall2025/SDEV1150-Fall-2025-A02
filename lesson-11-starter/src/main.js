@@ -50,7 +50,8 @@ form.addEventListener('input', (event) => {
   const element = event.target;
   console.log('input event fired on');
   // console.log(element);
-  console.log(element.name); // name of the element
+  // console.log(element.name); // name of the element
+  console.log(element.value);
   // remember that this element above will depend on which
   // input you are changing!
   // now that we know we have the element we can begin to check
@@ -66,6 +67,9 @@ form.addEventListener('input', (event) => {
     if (fullNameParts.length < REQUIRED_NAME_PARTS) {
       // this is a function on elements on the dom.
       element.setCustomValidity('Full Name must contain at least two words');
+    } else {
+      // remove this validity if valid (because it has more than two)
+      element.setCustomValidity('');
     }
   }
 
@@ -74,4 +78,5 @@ form.addEventListener('input', (event) => {
   // 1.3 custom validation for email (basic pattern check)
 
   // 1.4 report the validity status to the user
+  element.reportValidity();
 });
