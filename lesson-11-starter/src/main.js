@@ -95,4 +95,5 @@ form.addEventListener('input', (event) => {
 
   // 1.4 report the validity status to the user
   element.reportValidity();
+  // to show the validity on the page you need this line to execute.
 });
