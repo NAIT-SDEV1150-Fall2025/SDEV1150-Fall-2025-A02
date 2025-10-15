@@ -99,7 +99,7 @@ form.addEventListener('input', (event) => {
     // for character arrays you can check to see if a string includes
     // another with .includes!
     if (!element.value.includes('@')) {
-      element.setCustomValidity('Invalid email');
+      element.setCustomValidity('Invalid email must contain @ symbol');
     } else {
       element.setCustomValidity('');
     }
