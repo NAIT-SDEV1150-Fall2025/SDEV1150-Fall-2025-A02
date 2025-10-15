@@ -59,6 +59,14 @@ form.addEventListener('input', (event) => {
   // 1.1 custom validation for fullName (must contain two words)
   if (element.name == 'fullName') {
     console.log('fullName Selected');
+    const REQUIRED_NAME_PARTS = 2;
+    // ensure that the user inputs a value that's two words.
+    // we'll use split (trim just removes space on either side)
+    const fullNameParts = element.value.trim().split(' ');
+    if (fullNameParts.length < REQUIRED_NAME_PARTS) {
+      // this is a function on elements on the dom.
+      element.setCustomValidity('Full Name must contain at least two words');
+    }
   }
 
   // 1.2 custom validation for bio (minimum length)
