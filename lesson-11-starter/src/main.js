@@ -44,7 +44,14 @@ form.addEventListener('reset', () => {
 // 1. Add validation logic to the form on 'input' events
 // we're going to listen a new event which is the input event.
 // this will fire whenever we change an input
+form.addEventListener('input', (event) => {
+  // we're going to get the element that the "input" event
+  // is happening on with the event.target.
+  const element = event.target;
+  console.log('input event fired on');
+  console.log(element);
 
+});
 
 // 1.1 custom validation for fullName (must contain two words)
 
