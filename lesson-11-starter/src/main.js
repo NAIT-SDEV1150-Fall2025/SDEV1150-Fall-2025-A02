@@ -23,7 +23,8 @@ function serializeForm(formEl) {
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-
+  // just a note this won't get fired if attributes with
+  // required aren't filled out.
   const data = serializeForm(form);
 
   result.textContent
@@ -41,6 +42,9 @@ form.addEventListener('reset', () => {
 });
 
 // 1. Add validation logic to the form on 'input' events
+// we're going to listen a new event which is the input event.
+// this will fire whenever we change an input
+
 
 // 1.1 custom validation for fullName (must contain two words)
 
@@ -49,4 +53,3 @@ form.addEventListener('reset', () => {
 // 1.3 custom validation for email (basic pattern check)
 
 // 1.4 report the validity status to the user
-  
