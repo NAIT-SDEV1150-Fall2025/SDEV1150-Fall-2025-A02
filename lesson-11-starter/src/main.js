@@ -58,7 +58,7 @@ form.addEventListener('input', (event) => {
   // what element we've selected, and also perform some validation
 
   // 1.1 custom validation for fullName (must contain two words)
-  if (element.name == 'fullName') {
+  if (element.name === 'fullName') {
     console.log('fullName Selected');
     const REQUIRED_NAME_PARTS = 2;
     // ensure that the user inputs a value that's two words.
@@ -78,7 +78,7 @@ form.addEventListener('input', (event) => {
   // and that message can say "Bio is too short (must be 40 characters)"
   // use what you've learned to do this.
   // first step is to check if it's the correct element
-  if (element.name == 'bio') {
+  if (element.name === 'bio') {
     // I want to check to see if the length
     // is greater than 40
     const MIN_LENGTH = 40;
@@ -92,6 +92,10 @@ form.addEventListener('input', (event) => {
     }
   }
   // 1.3 custom validation for email (basic pattern check)
+  // I want you to check to if the string as an @ in it.
+  // remember that strings are character arrays NOTE!
+  // show an error message that says "invalid email".
+  if (element.name === 'email')
 
   // 1.4 report the validity status to the user
   element.reportValidity();
