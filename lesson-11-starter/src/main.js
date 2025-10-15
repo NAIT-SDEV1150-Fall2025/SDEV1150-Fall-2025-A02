@@ -49,13 +49,17 @@ form.addEventListener('input', (event) => {
   // is happening on with the event.target.
   const element = event.target;
   console.log('input event fired on');
-  console.log(element);
+  // console.log(element);
+  console.log(element.name); // name of the element
   // remember that this element above will depend on which
   // input you are changing!
   // now that we know we have the element we can begin to check
   // what element we've selected, and also perform some validation
 
   // 1.1 custom validation for fullName (must contain two words)
+  if (element.name == 'fullName') {
+    console.log('fullName Selected');
+  }
 
   // 1.2 custom validation for bio (minimum length)
 
