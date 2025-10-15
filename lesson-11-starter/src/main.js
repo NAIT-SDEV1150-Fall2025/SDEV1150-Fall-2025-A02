@@ -50,7 +50,6 @@ form.addEventListener('input', (event) => {
   const element = event.target;
   console.log('input event fired on');
   console.log(element);
-
 });
 
 // 1.1 custom validation for fullName (must contain two words)
