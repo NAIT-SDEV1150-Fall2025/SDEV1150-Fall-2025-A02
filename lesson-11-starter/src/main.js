@@ -50,12 +50,16 @@ form.addEventListener('input', (event) => {
   const element = event.target;
   console.log('input event fired on');
   console.log(element);
+  // remember that this element above will depend on which
+  // input you are changing!
+  // now that we know we have the element we can begin to check
+  // what element we've selected, and also perform some validation
+
+  // 1.1 custom validation for fullName (must contain two words)
+
+  // 1.2 custom validation for bio (minimum length)
+
+  // 1.3 custom validation for email (basic pattern check)
+
+  // 1.4 report the validity status to the user
 });
-
-// 1.1 custom validation for fullName (must contain two words)
-
-// 1.2 custom validation for bio (minimum length)
-
-// 1.3 custom validation for email (basic pattern check)
-
-// 1.4 report the validity status to the user
