@@ -98,8 +98,19 @@ form.addEventListener('input', (event) => {
   if (element.name === 'email') {
     // for character arrays you can check to see if a string includes
     // another with .includes!
-    if (!element.value.includes('@')) {
-      element.setCustomValidity('Invalid email must contain @ symbol');
+    // method 1
+    // if (!element.value.includes('@')) {
+    //   element.setCustomValidity('Invalid email must contain @ symbol');
+    // } else {
+    //   element.setCustomValidity('');
+    // }
+    // method 2: regex (the bazooka you didn't need but have)
+    // you can take a look at an email regex here: https://regex101.com/r/SOgUIV/2
+    // always take a look at someone else's first.
+    const EMAIL_REGEX = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+    // in a regex you can use .test(yourString); which will return true or false
+    if (!EMAIL_REGEX.test(element.value.trim())) {
+      element.setCustomValidity('Invalid email, trust the regex!');
     } else {
       element.setCustomValidity('');
     }
