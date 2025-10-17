@@ -3,8 +3,10 @@
   "version": "0.0.2",
   "description": "Learning to use NPM and package managers.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "our-app": "node main.js"
   },
   "author": "Daniel Mouris",
   "license": "MIT",
