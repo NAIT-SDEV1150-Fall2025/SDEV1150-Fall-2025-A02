@@ -6,25 +6,15 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "our-app": "node main.js"
+    "our-app": "node main.js",
+    "format": "prettier . --write"
   },
   "author": "Daniel Mouris",
   "license": "MIT",
   "dependencies": {
     "dayjs": "^1.11.18"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

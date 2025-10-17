@@ -8,7 +8,7 @@ cd lesson-13
 npm init # follow prompts
 ```
 
-*NOTE: you can bypass the prompts with default values by passing the `-y` flag to the `npm init` command*
+_NOTE: you can bypass the prompts with default values by passing the `-y` flag to the `npm init` command_
 
 This will create the `package.json` file in the project directory. Your instructor will examine the file with
 you and examine the various sections (name, version, scripts, etc.).
@@ -29,7 +29,7 @@ Install a package for code formatting (we've used ESLint to this point, another 
 npm i --save-dev prettier
 ```
 
-*NOTE: you can also use the `-D` in place of `--save-dev` flag to install a devDependency*
+_NOTE: you can also use the `-D` in place of `--save-dev` flag to install a devDependency_
 
 Inspect the `package.json` file. What's changed (`dependencies` and `devDependencies`)? What's in the `node_modules` folder. Should `node_modules` be committed to GitHub? How can we prevent files/folders from being included in our GitHub repositories (HINT: `.gitignore`)?
 
@@ -41,11 +41,11 @@ Create a `main.js` file in the project directory. This isn't a typical front-end
 
 ```js
 // main.js
-import dayjs from "dayjs";
+import dayjs from 'dayjs';
 
 const now = dayjs();
-console.log("Current Date:", now.format("YYYY-MM-DD"));
-console.log("Current Time:", now.format("HH:mm:ss"));
+console.log('Current Date:', now.format('YYYY-MM-DD'));
+console.log('Current Time:', now.format('HH:mm:ss'));
 ```
 
 ## Execute the `main.js` script
@@ -79,7 +79,7 @@ npx prettier --write .
 
 The above command will format and write all updates to files in the current directory `./`. Go ahead and delete the semi-colons in the `main.js` file and run the prettier command again, what happens?
 
-*NOTE: the `npx` command is used to run node scripts (i.e., scripts installed in the local project) that have not been globally installed.*
+_NOTE: the `npx` command is used to run node scripts (i.e., scripts installed in the local project) that have not been globally installed._
 
 Prettier can be configured to work with your text editor as well, let's get rid of those double quotes and enforce the use of semicolons. Create the following config file for prettier in the project directory:
 
@@ -110,7 +110,7 @@ The commands we ran above will likely be run many times as work on our project. 
 
 We won't be using the `test` script, so it can be removed. What we now have are two scripts that can be used to run and format our project, respectively.
 
-*NOTE: notice that npx is not inclued in the script text above. Scripts are assumed to be run in the local project and so don't need the `npx` command*
+_NOTE: notice that npx is not inclued in the script text above. Scripts are assumed to be run in the local project and so don't need the `npx` command_
 
 To run the commands, you use the `npm run <script>` syntax:
 
@@ -163,14 +163,19 @@ Once you're done making your own custom updates to the project, stage your files
 
 1. Open a terminal in VS Code
 2. Stage all updated and created files:
+
 ```sh
 git add .
 ```
+
 3. Commit the changes:
+
 ```sh
 git commit -m 'Lesson 11 Example'
 ```
-4. Push your changes to the remote workbook repository: 
+
+4. Push your changes to the remote workbook repository:
+
 ```sh
 git push origin main
 ```
