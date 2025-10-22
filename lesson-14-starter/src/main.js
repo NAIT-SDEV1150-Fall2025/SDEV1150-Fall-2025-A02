@@ -12,8 +12,8 @@ import { greetUser, getDate, getTime } from './utils';
 let today = document.querySelector('#today');
 let time = document.querySelector('#time');
 // render the times
-today.textContent = getDate();
-time.textContent = getTime();
+today.textContent = `the date is ${getDate()}`;
+time.textContent = `the time is ${getTime()}`;
 
 const greeting = greetUser('dan');
 
