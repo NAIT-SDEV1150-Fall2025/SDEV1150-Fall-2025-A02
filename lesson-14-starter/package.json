@@ -1,5 +1,5 @@
 {
-  "name": "lesson-XX",
+  "name": "lesson-14",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,3 +16,5 @@
     "vite": "^7.0.4"
   }
 }
+
+
