@@ -7,8 +7,13 @@ import { greetUser, getDate, getTime } from './utils';
 // how every you'd like.
 // I want to update the date and time of ids today, time
 // let's test it out
-console.log(getDate());
-console.log(getTime());
+
+// select the ids
+let today = document.querySelector('#today');
+let time = document.querySelector('#time');
+// render the times
+today.textContent = getDate();
+time.textContent = getTime();
 
 const greeting = greetUser('dan');
 
