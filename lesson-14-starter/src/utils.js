@@ -1,3 +1,6 @@
+// let's use an external module/package like dayjs
+import dayjs from 'dayjs';
+
 // we're going to define a function
 // and explicitly export it.
 // the exporting piece is different than python but otherwise
@@ -13,3 +16,8 @@ export function greetUser(user) {
   }
   return `Welcome to lesson 14 ${user}`;
 }
+
+// 1. we're going to create two functions
+// get date and get time.
+// write these!
+// I want you to export them
