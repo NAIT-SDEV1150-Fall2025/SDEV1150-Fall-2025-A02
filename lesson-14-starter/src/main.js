@@ -1,4 +1,3 @@
-
 // let's import our function from the same folder.
 // use it in our code.
 import { greetUser } from './utils';
