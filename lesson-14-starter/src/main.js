@@ -22,12 +22,16 @@ const greeting = greetUser('dan');
 console.log('We used modules!');
 console.log(greeting);
 
+// let's add the greeting
+let greetingElement = document.querySelector('#greet');
+greetingElement.textContent = greeting;
+
 // we're going to use anime to create animation
 // note go explore the documentation more
 // here for different types of animations
-animate('#greeting', {
+animate('#greet', {
   translateY: [-20, 0],
   opacity: [0, 1],
-  duration: 3000,
+  duration: 5000,
   easing: 'easeOutQuad',
 });
