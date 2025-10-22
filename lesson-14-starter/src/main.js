@@ -1,3 +1,5 @@
+// let's import animejs into our project
+import { animate } from 'animejs';
 
 // let's import our function from the same folder.
 // use it in our code.
@@ -20,3 +22,12 @@ const greeting = greetUser('dan');
 console.log('We used modules!');
 console.log(greeting);
 
+// we're going to use anime to create animation
+// note go explore the documentation more
+// here for different types of animations
+animate('#greeting', {
+  translateY: [-20, 0],
+  opacity: [0, 1],
+  duration: 3000,
+  easing: 'easeOutQuad',
+});
