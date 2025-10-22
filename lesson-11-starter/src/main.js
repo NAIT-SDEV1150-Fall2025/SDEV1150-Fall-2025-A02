@@ -116,6 +116,14 @@ form.addEventListener('input', (event) => {
     }
   }
 
+  // useful for assingment 2
+  // you can use validationMessage property on the element
+  // once you've set the customValidity.
+  console.log('Element selected');
+  console.log(element);
+  console.log('validationMessage on the element itself');
+  console.log(element.validationMessage);
+
   // 1.4 report the validity status to the user
   element.reportValidity();
   // to show the validity on the page you need this line to execute.
