@@ -123,6 +123,9 @@ form.addEventListener('input', (event) => {
   console.log(element);
   console.log('validationMessage on the element itself');
   console.log(element.validationMessage);
+  // the validation message above is going to show something
+  // what is passed into the setCustomValidity or the html
+  // validity message.
 
   // 1.4 report the validity status to the user
   element.reportValidity();
