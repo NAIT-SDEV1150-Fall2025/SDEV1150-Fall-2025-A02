@@ -18,6 +18,19 @@ export function greetUser(user) {
 }
 
 // 1. we're going to create two functions
-// get date and get time.
+// getDate and getTime.
+export function getDate() {
+  // get today
+  // using the package we imported above
+  return dayjs().format('dddd MMMM DD YYYY');
+  // if you want to learn more about the string
+  // take a look at the docs!
+  // https://day.js.org/docs/en/display/format
+}
+export function getTime() {
+  // returns the time.
+  return dayjs().format('HH:mm:ss');
+}
+
 // write these!
 // I want you to export them
