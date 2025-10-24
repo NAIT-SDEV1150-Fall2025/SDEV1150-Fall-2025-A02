@@ -23,4 +23,27 @@ Content-Type: application/json
 
 # the status code 201 created is all good
 # it means that a new resource was created
+# IMPORTANT NOTE: make sure that you add the ###
+# for a new request.
 
+
+### PATCH
+# we're going to patch a specific item
+# in the db. the books/2 is going to
+# access the book at the given item
+PATCH http://localhost:3000/books/2
+Content-Type: application/json
+
+{
+    "author": "Link, the Hero of time"
+}
+
+# the status is 200 ok
+# and you can see that the item is updated
+# from "Link" to "Link, the Hero of time"
+
+### DELETE
+# you can delete a book with the resource
+# in the same way.
+DELETE http://localhost:3000/books/3
+# that's going to remove it

@@ -10,16 +10,9 @@
     {
       "id": "2",
       "title": "The Hero's Journey",
-      "author": "Link",
+      "author": "Link, the Hero of time",
       "year": 2022,
       "genre": "Adventure"
-    },
-    {
-      "id": "3",
-      "title": "Chronicles of Ganon",
-      "author": "Ganondorf",
-      "year": 2021,
-      "genre": "Epic"
     },
     {
       "id": "41a1",
