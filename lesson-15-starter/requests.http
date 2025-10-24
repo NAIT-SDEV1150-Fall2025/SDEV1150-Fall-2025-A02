@@ -1,0 +1,26 @@
+### This is going to make requests and get responses.
+
+### Get all books
+GET http://localhost:3000/books
+
+# above is a just a typical get
+# request you'll just get information
+# render it on the page.
+
+### Post a book
+# content-type is part of the header
+# that you need to send to tell the server
+# "hey i'm sending json as the body"
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+    "title": "Tales of the Triforce",
+    "author": "Impa",
+    "year": 2023,
+    "genre": "Lore"
+}
+
+# the status code 201 created is all good
+# it means that a new resource was created
+
