@@ -1,0 +1,15 @@
+{
+  "name": "lesson-15-starter",
+  "version": "0.0.1",
+  "description": "In this exercise, you will explore how front-end applications communicate with backend services using RESTful APIs. You’ll simulate a REST API locally with **JSON Server**, and send requests using both a browser and a REST client (such as the **VS Code REST Client** extension). The focus is on understanding how APIs structure and return data and not on writing JavaScript code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
