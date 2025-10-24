@@ -3,6 +3,7 @@ import { animate } from 'animejs';
 
 // let's import our function from the same folder.
 // use it in our code.
+// named imports can all be imported like so.
 import { greetUser, getDate, getTime } from './utils';
 // 2. I want you import the date function
 // we did this above, for named exports you can have

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 16 - Async JavaScript and Fetch API</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <h1>Async JavaScript and Fetch API</h1>
+  <form id="addBook">
+    <fieldset>
+      <legend>Add Book</legend>
+      <div class="form-control">
+        <label for="title">Title</label>
+        <input type="text" name="title" />
+      </div>
+      <div class="form-control">
+        <label for="Author">Author</label>
+        <input type="text" name="author" />
+      </div>
+      <div class="form-control">
+        <label for="year">Year</label>
+        <input type="number" name="year" />
+      </div>
+      <div class="form-control">
+        <label for="Genre">Genre</label>
+        <select name="genre">
+          <option value="Adventure">Adventure</option>
+          <option value="Epic">Epic</option>
+          <option value="Fantasy">Fantasy</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <button type="submit">Add</button>
+      </div>
+    </fieldset>
+  </form>
+  <div class="form-control">
+    <button class="primary" id="loadBooks">Load Books</button>
+  </div>
+  <ul id="bookList"></ul>
+</body>
+
+</html>
