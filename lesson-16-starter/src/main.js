@@ -47,13 +47,15 @@ async function submitHandler(event) {
   // a lot of times you'll need to use the formData obj
   // another way to get form data from the html.
   const formData = new FormData(form);
-  console.log(formData);
+  console.log(formData); // loop over the entries
+  // get the data
+  // format it for the backend
+  // post it.
+  // fetch the data as well.
 
   // what we're going to next class is
   // hook it all up with the backend.
-
 }
-
 
 // Attach event listeners to the button and form
 loadButton.addEventListener('click', loadBooksHander);
