@@ -27,6 +27,18 @@ export async function getData(endpoint) {
 }
 
 // POST utility function
+// this is going to take a js object
+export async function postData(endpoint, payload) {
+  // note the body data is normally called payload
+  const response = await fetch(endpoint, {
+    method: 'POST', // giving info to the server
+    headers: { // extra information for the request.
+      'Content-Type': 'application/json',
+      // let the server know that you're sending json
+    },
+    body: JSON.stringify(payload),
+  });
+}
 
 
 // TODO: Add DELETE function here
