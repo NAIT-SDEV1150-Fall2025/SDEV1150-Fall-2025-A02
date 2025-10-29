@@ -10,12 +10,27 @@ const ENDPOINT = 'http://localhost:3000/books';
 
 // Define a function to handle loading and displaying the list of books
 async function loadBooksHander() {
+  // before we make the request we're going to create
+  // to let the user know it's loading.
+  list.innerHTML = '<li>Loading...</li>';
   // let's make the fetch request using our getData function
   try {
     // since our getData function is async we need to
     // await it.
     const books = await getData(ENDPOINT);
     console.log('books', books);
+    // clear the html so that it's not loading any more
+    list.innerHTML = '';
+
+    // display it the user.
+    books.forEach((book) => {
+      // creating the element
+      const bookLi = document.createElement('li');
+      // appending the data to the textContent of our created element
+      bookLi.textContent = `${book.author} by ${book.title}`;
+      // adding it to the page.
+      list.append(bookLi);
+    });
   } catch (error) {
     // error while fetching.
     console.log(error);
