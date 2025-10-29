@@ -1,9 +1,10 @@
 // Import the functions necessary to make the API calls
-import { getData } from './utils';
+import { getData, postData } from './utils';
 // this is named so I need to put curly braces around it.
 // Select the necessary DOM elements
 let loadButton = document.querySelector('#loadBooks');
 let list = document.querySelector('#bookList');
+let addForm = document.querySelector('#addBook');
 
 // Define the API endpoint
 const ENDPOINT = 'http://localhost:3000/books';
@@ -39,6 +40,20 @@ async function loadBooksHander() {
   }
 }
 // Define a function to handle form submission for adding a new book
+async function submitHandler(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  // a lot of times you'll need to use the formData obj
+  // another way to get form data from the html.
+  const formData = new FormData(form);
+  console.log(formData);
+
+  // what we're going to next class is
+  // hook it all up with the backend.
+
+}
+
 
 // Attach event listeners to the button and form
 loadButton.addEventListener('click', loadBooksHander);
@@ -46,5 +61,5 @@ loadButton.addEventListener('click', loadBooksHander);
 // passing the function by reference which means
 // not executing it because it will be executed
 // on the click of the load button
-
+addForm.addEventListener('submit', submitHandler);
 // TODO: Add delete functionality

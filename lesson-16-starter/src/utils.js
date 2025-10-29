@@ -35,10 +35,18 @@ export async function postData(endpoint, payload) {
     headers: { // extra information for the request.
       'Content-Type': 'application/json',
       // let the server know that you're sending json
+      // Note in the future this is going to be where
+      // you pass in tokens.
     },
     body: JSON.stringify(payload),
   });
-}
 
+  // below is the exact same as the get request.
+  if (!response.ok) {
+    throw new Error('Network response failed');
+  }
+  const data = await response.json();
+  return data;
+}
 
 // TODO: Add DELETE function here
