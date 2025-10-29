@@ -27,6 +27,13 @@
       "author": "Impa",
       "year": 2023,
       "genre": "Lore"
+    },
+    {
+      "id": "090e",
+      "title": "Biography of Dan",
+      "author": "Dan",
+      "year": 2025,
+      "genre": "Classics"
     }
   ]
 }

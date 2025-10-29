@@ -18,7 +18,7 @@ export async function getData(endpoint) {
     // this above can only be caught by a try ... catch
   }
   // the response we get a json string, response has a method called .json()
-  // which is going to parse the json into a useable javascript object.
+  // which is going to parse the json into a useable javascript object
   const data = await response.json();
   // you can't guarantee how long it is so it's
   // also a promise if it can parsed or not.
@@ -27,5 +27,6 @@ export async function getData(endpoint) {
 }
 
 // POST utility function
+
 
 // TODO: Add DELETE function here

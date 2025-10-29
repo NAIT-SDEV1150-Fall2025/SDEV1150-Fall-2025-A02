@@ -15,10 +15,10 @@ POST http://localhost:3000/books
 Content-Type: application/json
 
 {
-    "title": "Tales of the Triforce",
-    "author": "Impa",
-    "year": 2023,
-    "genre": "Lore"
+    "title": "Biography of Dan",
+    "author": "Dan",
+    "year": 2025,
+    "genre": "Classics"
 }
 
 # the status code 201 created is all good

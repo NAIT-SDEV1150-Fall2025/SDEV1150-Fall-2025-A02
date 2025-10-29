@@ -18,6 +18,8 @@ async function loadBooksHander() {
     // since our getData function is async we need to
     // await it.
     const books = await getData(ENDPOINT);
+    // books after this line above is now a concrete value
+    // you can use it as is.
     console.log('books', books);
     // clear the html so that it's not loading any more
     list.innerHTML = '';
@@ -27,7 +29,7 @@ async function loadBooksHander() {
       // creating the element
       const bookLi = document.createElement('li');
       // appending the data to the textContent of our created element
-      bookLi.textContent = `${book.author} by ${book.title}`;
+      bookLi.textContent = `${book.title} by ${book.author}`;
       // adding it to the page.
       list.append(bookLi);
     });
