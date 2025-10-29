@@ -37,6 +37,7 @@ async function loadBooksHander() {
   } catch (error) {
     // error while fetching.
     console.log(error);
+    // handle the error case next class.
   }
 }
 // Define a function to handle form submission for adding a new book
