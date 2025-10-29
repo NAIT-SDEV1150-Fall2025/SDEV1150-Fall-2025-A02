@@ -10,12 +10,19 @@
     {
       "id": "2",
       "title": "The Hero's Journey",
-      "author": "Link, the Hero of time",
+      "author": "Link, is shoboy",
       "year": 2022,
       "genre": "Adventure"
     },
     {
       "id": "41a1",
+      "title": "Tales of the Triforce",
+      "author": "Impa",
+      "year": 2023,
+      "genre": "Lore"
+    },
+    {
+      "id": "7e64",
       "title": "Tales of the Triforce",
       "author": "Impa",
       "year": 2023,
