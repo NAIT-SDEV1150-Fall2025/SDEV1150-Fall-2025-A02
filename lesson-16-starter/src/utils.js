@@ -5,7 +5,10 @@
 // fail or succeed, but this also takes time.
 export async function getData(endpoint) {
   // to make the request we need to explicitly "await"
-  const response = await fetch(endpoint, { method: 'GET' });
+  const response = await fetch(
+    endpoint,
+    { method: 'GET' }, // this is the default obj
+  );
   // this is going to give you all of the information about the response itself.
   // we're going to throw an error if the response is not ok.
   console.log('Response', response);
@@ -16,7 +19,9 @@ export async function getData(endpoint) {
   }
   // the response we get a json string, response has a method called .json()
   // which is going to parse the json into a useable javascript object.
-  const data = response.json();
+  const data = await response.json();
+  // you can't guarantee how long it is so it's
+  // also a promise if it can parsed or not.
   console.log('data', data);
   return data;
 }
