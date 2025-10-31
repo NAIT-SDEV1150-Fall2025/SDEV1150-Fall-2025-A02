@@ -48,10 +48,24 @@ async function submitHandler(event) {
   // a lot of times you'll need to use the formData obj
   // another way to get form data from the html.
   const formData = new FormData(form);
-  console.log(formData); // loop over the entries
-  // get the data
+  console.log('formData', formData); // loop over the entries
   // format it for the backend
+  // extract the formData using Object.fromEntries
+  const data = Object.fromEntries(formData.entries());
+  console.log('data', data);
+  // the above turns the formData in to a plain old js object
+  // convert the year to a number
+  data['year'] = Number(data.year);
+  // different ways to access the year above.
+
   // post it.
+  try {
+    // the only thing that matters is that it doesn't fail
+    // I don't really need to response because we're going to
+    // load the data after the post.
+  } catch (error) {
+    console.log(error);
+  }
   // fetch the data as well.
 
   // what we're going to next class is
