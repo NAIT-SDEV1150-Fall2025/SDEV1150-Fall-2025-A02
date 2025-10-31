@@ -63,13 +63,14 @@ async function submitHandler(event) {
     // the only thing that matters is that it doesn't fail
     // I don't really need to response because we're going to
     // load the data after the post.
+    await postData(ENDPOINT, data);
+
+    // fetch the data as well.
+    // to keep the state in sync, load the state
+    loadBooksHander();
   } catch (error) {
     console.log(error);
   }
-  // fetch the data as well.
-
-  // what we're going to next class is
-  // hook it all up with the backend.
 }
 
 // Attach event listeners to the button and form
