@@ -20,6 +20,20 @@
       "author": "Ganondorf",
       "year": 2021,
       "genre": "Epic"
+    },
+    {
+      "id": "c092",
+      "title": "Dans book club",
+      "author": "Oprah",
+      "year": 2000,
+      "genre": "Epic"
+    },
+    {
+      "id": "221f",
+      "title": "Freddy journey",
+      "author": "gary steves",
+      "year": 1999,
+      "genre": "Adventure"
     }
   ]
 }

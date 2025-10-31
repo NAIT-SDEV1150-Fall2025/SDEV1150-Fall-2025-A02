@@ -68,6 +68,8 @@ async function submitHandler(event) {
     // fetch the data as well.
     // to keep the state in sync, load the state
     loadBooksHander();
+    // resetting the state of the form
+    addForm.reset();
   } catch (error) {
     console.log(error);
   }
