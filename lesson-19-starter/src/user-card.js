@@ -1,3 +1,24 @@
+// create the element
+const template = document.createElement('template');
+template.innerHTML = `
+<!-- CSS for our card -->
+<style>
+
+</style>
+
+<!-- HTML for our card -->
+<div class="card">
+  <!-- We're going to remove the image src -->
+  <img src="" width="80" height="80" alt="avatar">
+  <div class="info">
+    <!-- A slot allows you define where -->
+    <slot name="name" class="name"></slot>
+    <br/>
+    <slot name="description" class="description"></slot>
+  </div>
+</div>
+`;
+
 // create a class that extends HTMLElement
 class UserCard extends HTMLElement {
   // remember from 1001 that the constructor
@@ -13,9 +34,10 @@ class UserCard extends HTMLElement {
     const shadow = this.attachShadow({ mode: 'open' });
     // we're going to clone and attach the template
     // to the shadowDom.
-    const template = document.querySelector(
-      '#user-card-template',
-    );
+    // when we were using the templat in the html file.
+    // const template = document.querySelector(
+    //   '#user-card-template',
+    // );
     // we're going to create a copy of this element
     // so that we can modify and change it and it
     // won't modify the existing template.
