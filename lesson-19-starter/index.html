@@ -15,18 +15,22 @@
     <!-- Template here -->
     <template id="user-card-template">
       <div class="card">
-        <img src="assets/zelda-avatar.png" width="80" height="80" alt="avatar">
+        <!-- We're going to remove the image src -->
+        <img src="" width="80" height="80" alt="avatar">
         <div class="info">
           <span class="name">Zelda</span>
           <span class="description">Princess of Hyrule</span>
         </div>
       </div>
     </template>
-    <!-- Create user-cards here -->
+    <!-- Create user-cards here
+        We're to pass the attribute of the avatar
+        and with this we're going to create an element
+    -->
+    <user-card avatar="assets/zelda-avatar.png"></user-card>
+    <user-card avatar="assets/link-avatar.png"></user-card>
     <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
-    <user-card></user-card>
+
     <!-- This is our own definition of an html element -->
 
   </main>

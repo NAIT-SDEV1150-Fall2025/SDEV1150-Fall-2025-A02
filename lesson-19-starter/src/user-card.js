@@ -21,6 +21,17 @@ class UserCard extends HTMLElement {
     // won't modify the existing template.
     const content = template.content.cloneNode(true);
 
+    // below here we've used an attribute to actually create an element here.
+    // we're going get the attribute avatar from the user card call
+    // <user-card avatar="assets/zelda-avatar.png"></user-card>
+    let avatarAttribute = this.getAttribute('avatar');
+    console.log(avatarAttribute || 'https://placehold.co/80x80/0077ff/ffffff');
+    // if the above is empty it'll default to placeholder.
+    // select the image from the content
+    let image = content.querySelector('img');
+    // set the attribute
+    image.src = avatarAttribute || 'https://placehold.co/80x80/0077ff/ffffff';
+
     // add the html to our component
     shadow.appendChild(content);
   }
