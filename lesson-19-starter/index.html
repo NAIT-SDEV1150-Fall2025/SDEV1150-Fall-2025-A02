@@ -18,8 +18,10 @@
         <!-- We're going to remove the image src -->
         <img src="" width="80" height="80" alt="avatar">
         <div class="info">
-          <span class="name">Zelda</span>
-          <span class="description">Princess of Hyrule</span>
+          <!-- A slot allows you define where -->
+          <slot name="name" class="name"></slot>
+          <br/>
+          <slot name="description" class="description"></slot>
         </div>
       </div>
     </template>
@@ -27,8 +29,21 @@
         We're to pass the attribute of the avatar
         and with this we're going to create an element
     -->
-    <user-card avatar="assets/zelda-avatar.png"></user-card>
-    <user-card avatar="assets/link-avatar.png"></user-card>
+    <user-card avatar="assets/zelda-avatar.png">
+        <!-- Let's add to the slot
+        this will add to the slot for name
+        handy because you'll put this in the right area.
+        -->
+        <span slot="name">Zelda</span>
+        <span slot="description">Princess of Hyrule</span>
+    </user-card>
+    <user-card avatar="assets/link-avatar.png">
+
+        <span slot="name">Link</span>
+        <span slot="description">Hey Listen</span>
+    </user-card>
+    <!-- The call below will use a placeholder
+     as there's not "avatar" attribute to it. -->
     <user-card></user-card>
 
     <!-- This is our own definition of an html element -->

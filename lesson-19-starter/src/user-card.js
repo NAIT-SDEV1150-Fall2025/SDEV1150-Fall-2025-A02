@@ -25,11 +25,12 @@ class UserCard extends HTMLElement {
     // we're going get the attribute avatar from the user card call
     // <user-card avatar="assets/zelda-avatar.png"></user-card>
     let avatarAttribute = this.getAttribute('avatar');
-    console.log(avatarAttribute || 'https://placehold.co/80x80/0077ff/ffffff');
+    // console.log(avatarAttribute || 'https://placehold.co/80x80/0077ff/ffffff');
     // if the above is empty it'll default to placeholder.
     // select the image from the content
     let image = content.querySelector('img');
     // set the attribute
+    // if avatarAttribute exists, then use that, otherwise use the placeholder
     image.src = avatarAttribute || 'https://placehold.co/80x80/0077ff/ffffff';
 
     // add the html to our component
