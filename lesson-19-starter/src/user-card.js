@@ -3,7 +3,24 @@ const template = document.createElement('template');
 template.innerHTML = `
 <!-- CSS for our card -->
 <style>
+.card {
+  background: #ffffff;
+  color: #222222;
+  border: 1px solid #e6e6e6;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 320px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
 
+.name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
 </style>
 
 <!-- HTML for our card -->
@@ -42,6 +59,8 @@ class UserCard extends HTMLElement {
     // so that we can modify and change it and it
     // won't modify the existing template.
     const content = template.content.cloneNode(true);
+    // above we have the template that's created by the template
+    // string, with the styles in it so it's fully self contained.
 
     // below here we've used an attribute to actually create an element here.
     // we're going get the attribute avatar from the user card call
