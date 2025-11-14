@@ -29,7 +29,7 @@ document.querySelector('main').appendChild(anotherUserCard);
 // we're going to create a toggle button here
 
 const toggleBtn = document.createElement('button');
-toggleBtn.textContent = 'Toggle Theme';
+toggleBtn.textContent = 'Toggle Theme (change to dark)';
 
 document.body.prepend(toggleBtn);
 
@@ -43,13 +43,26 @@ toggleBtn.addEventListener('click', () => {
   let cardBGColor = '#ffffff';
   let cardColor = '#222222';
   let cardAccentColor = '#0077ff';
+  toggleBtn.textContent = 'Toggle Theme (change to dark)';
   // if it's dark we're going to change these colors
   if (dark) {
     cardBGColor = '#1f2937';
     cardColor = '#e5e7eb';
     cardAccentColor = 'gold';
+    toggleBtn.textContent = 'Toggle Theme (change to light)';
   }
   console.log(cardBGColor);
   console.log(cardColor);
   console.log(cardAccentColor);
+  // let's set the --global-card-bg etc properties on the css
+  // globally so that our card will use the colors defined.
+  document.documentElement.style.setProperty(
+    '--global-card-bg', cardBGColor,
+  );
+  document.documentElement.style.setProperty(
+    '--global-card-color', cardColor,
+  );
+  document.documentElement.style.setProperty(
+    '--global-card-accent', cardAccentColor,
+  );
 });
