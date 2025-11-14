@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+#btn-theme {
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.top-nav {
+  width: 100%;
+  background: #1f2937;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+.top-nav .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes counter to far right */
+  gap: 12px;
+}
+
+.top-nav h1 {
+  font-size: 1.05rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+#follow-counter {
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  min-width: 96px;
+  text-align: right;
+}

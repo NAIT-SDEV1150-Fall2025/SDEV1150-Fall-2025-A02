@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 21 - Web Components (Communication and State)</title>
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <main>
+    <user-card avatar="assets/zelda-avatar.png">
+      <span slot="name"><span style="color:gold">Zelda</span></span>
+      <span slot="description">Princess of Hyrule</span>
+    </user-card>
+
+    <user-card avatar="assets/link-avatar.png">
+      <span slot="name">Link</span>
+      <span slot="description">Hero of Hyrule</span>
+    </user-card>
+  </main>
+
+</body>
+
+</html>

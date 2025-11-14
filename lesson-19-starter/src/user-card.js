@@ -1,8 +1,7 @@
 // create the element
 const template = document.createElement('template');
 template.innerHTML = `
-<!-- CSS for our card -->
-<style>
+<!-- CSS for our card -->>
 .card {
   background: #ffffff;
   color: #222222;
@@ -17,7 +16,7 @@ template.innerHTML = `
 }
 
 .name {
-  font-size: 1.2em;
+  font-size: 2.2em;
   font-weight: bold;
   margin: 0;
 }
