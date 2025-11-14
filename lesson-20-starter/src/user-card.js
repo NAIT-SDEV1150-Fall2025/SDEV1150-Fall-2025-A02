@@ -81,6 +81,12 @@ class UserCard extends HTMLElement {
     console.log('------------------');
     // because these values have changed we're going to update the
     // value of the image
+    if (name === 'avatar' && this.shadowRoot) {
+      // we can select the img from the shadowRoot using our querySelector
+      // here
+      const img = this.shadowRoot.querySelector('img');
+      img.src = newValue; // is what the new value of the attribute is.
+    }
   }
 }
 customElements.define('user-card', UserCard);
