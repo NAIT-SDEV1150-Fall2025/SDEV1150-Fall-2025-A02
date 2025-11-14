@@ -3,9 +3,9 @@ const template = document.createElement('template');
 template.innerHTML = `
   <style>
     :host {
-      --card-bg: #ffffff;
-      --card-color: #222222;
-      --card-accent: #0077ff;
+      --card-bg: var(--global-card-bg, #ffffff);
+      --card-color: var(--global-card-color, #222222);
+      --card-accent: var(--global-card-accent, #0077ff);
       display: block;
     }
     .card {

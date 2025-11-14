@@ -25,7 +25,6 @@ anotherUserCard.appendChild(descSpan);
 document.querySelector('main').appendChild(anotherUserCard);
 // Why doesn't the custom avatar show up for this element?
 
-
 // something very common is adding a "dark mode"
 // we're going to create a toggle button here
 
@@ -40,5 +39,17 @@ let dark = false;
 toggleBtn.addEventListener('click', () => {
   // trigger it back and forth from true to false.
   dark = !dark;
-  console.log(dark);
+  // inside of our code we're going check if it's dark
+  let cardBGColor = '#ffffff';
+  let cardColor = '#222222';
+  let cardAccentColor = '#0077ff';
+  // if it's dark we're going to change these colors
+  if (dark) {
+    cardBGColor = '#1f2937';
+    cardColor = '#e5e7eb';
+    cardAccentColor = 'gold';
+  }
+  console.log(cardBGColor);
+  console.log(cardColor);
+  console.log(cardAccentColor);
 });
