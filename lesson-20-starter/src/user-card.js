@@ -66,6 +66,7 @@ class UserCard extends HTMLElement {
   }
 
   // we're going to respond to the changes in avatar
+  // built in to web components.
   static get observedAttributes() {
     return ['avatar']; // the only attribute that we'll observe here is
     // the avatar attribute
@@ -77,6 +78,9 @@ class UserCard extends HTMLElement {
     console.log(name);
     console.log(oldValue);
     console.log(newValue);
+    console.log('------------------');
+    // because these values have changed we're going to update the
+    // value of the image
   }
 }
 customElements.define('user-card', UserCard);
