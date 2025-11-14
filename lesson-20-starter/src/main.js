@@ -3,7 +3,7 @@ import './user-card.js';
 
 // Create an additional user card using HTML and append it to the main element
 const dynamicUserCard = `
-    <user-card avatar="https://placehold.co/80x80/7700ff/ffffff">
+    <user-card avatar="https://placehold.co/80x80/green/yellow">
       <span slot="name">Mipha</span>
       <span slot="description">Zora Champion</span>
     </user-card>`;
@@ -12,7 +12,8 @@ document.querySelector('main').insertAdjacentHTML('beforeend', dynamicUserCard);
 
 // Create another user card using JavaScript DOM API only and append it to the main element
 const anotherUserCard = document.createElement('user-card');
-anotherUserCard.setAttribute('avatar', 'https://placehold.co/80x80/770000/ffffff');
+// below that this style is not being updated in our component.
+anotherUserCard.setAttribute('avatar', 'https://placehold.co/80x80/green/yellow');
 const nameSpan = document.createElement('span');
 nameSpan.setAttribute('slot', 'name');
 nameSpan.textContent = 'Yunobo';

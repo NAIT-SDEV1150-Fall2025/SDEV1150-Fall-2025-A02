@@ -53,6 +53,7 @@ template.innerHTML = `
 document.body.appendChild(template);
 
 class UserCard extends HTMLElement {
+  // this essentially fires only when the component is created.
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: 'open' });
@@ -62,6 +63,20 @@ class UserCard extends HTMLElement {
     const img = content.querySelector('img');
     img.src = this.getAttribute('avatar') || 'https://placehold.co/80x80/0077ff/ffffff';
     shadow.appendChild(content);
+  }
+
+  // we're going to respond to the changes in avatar
+  static get observedAttributes() {
+    return ['avatar']; // the only attribute that we'll observe here is
+    // the avatar attribute
+  }
+
+  // below here let's do something when the attribute changes
+  attributeChangedCallback(name, oldValue, newValue) {
+    console.log('attributeChangedCallback');
+    console.log(name);
+    console.log(oldValue);
+    console.log(newValue);
   }
 }
 customElements.define('user-card', UserCard);
