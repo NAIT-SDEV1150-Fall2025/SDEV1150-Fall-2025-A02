@@ -13,7 +13,15 @@
 <body>
   <main>
     <user-card avatar="assets/zelda-avatar.png">
-      <span slot="name">Zelda</span>
+      <span slot="name">
+        <!-- override the styles by adding an element with the
+         specific style property
+        -->
+        <span style="color:#b69c12;">
+          Zelda
+        </span>
+        <!-- Is going to only apply to this specifc item-->
+      </span>
       <span slot="description">Princess of Hyrule</span>
     </user-card>
 
