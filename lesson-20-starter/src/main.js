@@ -15,8 +15,11 @@ const anotherUserCard = document.createElement('user-card');
 // below that this style is not being updated in our component.
 
 // for this line to be applied below we need to "observe" the changes
-
 anotherUserCard.setAttribute('avatar', 'https://placehold.co/80x80/green/yellow');
+
+
+
+
 const nameSpan = document.createElement('span');
 nameSpan.setAttribute('slot', 'name');
 nameSpan.textContent = 'Yunobo';

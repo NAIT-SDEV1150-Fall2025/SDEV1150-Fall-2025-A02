@@ -74,11 +74,6 @@ class UserCard extends HTMLElement {
 
   // below here let's do something when the attribute changes
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log('attributeChangedCallback');
-    console.log(name);
-    console.log(oldValue);
-    console.log(newValue);
-    console.log('------------------');
     // because these values have changed we're going to update the
     // value of the image
     if (name === 'avatar' && this.shadowRoot) {
