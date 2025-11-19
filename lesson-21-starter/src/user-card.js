@@ -72,9 +72,13 @@ class UserCard extends HTMLElement {
     // we're going to assign the above to this._btn
     // this._btn = content.querySelector('button');
     this._btn = content.querySelector('button');
-    console.log(this._btn);
     // we're going to add an event listener on this button for clicks
     // set the value created above to the opposite.
+    this._btn.addEventListener('click', () => {
+      console.log('Follow button clicked');
+      this._setFollow(!this._followed);
+      console.log(this._followed);
+    });
 
     // we're going to move this to the bottom.
     shadow.appendChild(content);
