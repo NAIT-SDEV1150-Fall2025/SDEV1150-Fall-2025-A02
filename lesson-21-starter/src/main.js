@@ -37,5 +37,10 @@ toggleBtn.addEventListener('click', () => {
   document.documentElement.style.setProperty('--global-card-accent', dark ? 'gold' : '#0077ff');
 });
 
-// we
+// we can select a card programmatically and follow
+// or unfollow it.
+// let's select this first one
+let firstCard = document.querySelector('user-card');
 
+// we can use our follow and unfollow in our code.
+firstCard.follow();
