@@ -60,3 +60,14 @@ firstCard.addEventListener('follow-change', (event) => {
 // if you want this from all cards here.
 // document.addEventListener('follow-change', (event) => {
 // or the parent here.
+
+
+
+
+
+
+
+
+
+
+

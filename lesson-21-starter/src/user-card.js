@@ -110,7 +110,7 @@ class UserCard extends HTMLElement {
         detail: {
           followed: this.followed,
         },
-        bubbles: true, // the parent can access
+        bubbles: true, // the parent can access this event.
         composed: true, // allows us to cross shadow doms.
       }),
     );
