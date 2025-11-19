@@ -67,13 +67,17 @@ class UserCard extends HTMLElement {
     const img = content.querySelector('img');
     img.src = this.getAttribute('avatar') || 'https://placehold.co/80x80/0077ff/ffffff';
 
-    shadow.appendChild(content);
-
     // let's hook this button up to our html button.
     // we're going to select the button using the querySelector on the content
     // we're going to assign the above to this._btn
+    // this._btn = content.querySelector('button');
+    this._btn = content.querySelector('button');
+    console.log(this._btn);
     // we're going to add an event listener on this button for clicks
     // set the value created above to the opposite.
+
+    // we're going to move this to the bottom.
+    shadow.appendChild(content);
   }
 
   _setFollow(value) {
