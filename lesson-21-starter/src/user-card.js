@@ -104,6 +104,16 @@ class UserCard extends HTMLElement {
     this._setFollow(!this._followed);
   }
 
+  // we are going to create some functions to follow
+  // and unfollow a user card
+  follow() {
+    this._setFollow(true);
+  }
+
+  unfollow() {
+    this._setFollow(false);
+  }
+
   // Respond to attribute changes if needed in the future
   static get observedAttributes() {
     return ['avatar'];
