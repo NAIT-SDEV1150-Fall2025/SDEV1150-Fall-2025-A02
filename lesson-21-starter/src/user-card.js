@@ -57,12 +57,24 @@ class UserCard extends HTMLElement {
   constructor() {
     super();
 
+    // we're going to track the state
+    // but this variable will only be updated in the
+    // component itself.
+    this._followed = false;
+
     const shadow = this.attachShadow({ mode: 'open' });
     const content = template.content.cloneNode(true);
     const img = content.querySelector('img');
     img.src = this.getAttribute('avatar') || 'https://placehold.co/80x80/0077ff/ffffff';
 
     shadow.appendChild(content);
+  }
+
+  _setFollow(value) {
+    // this is equivalent to self in python
+    // we're are updating the value of the _follow attribute on the
+    // instance with the value passed in.
+    this._follow = value;
   }
 
   // Respond to attribute changes if needed in the future
