@@ -47,3 +47,11 @@ firstCard.follow();
 
 // this is essentially using the getter here.
 console.log(firstCard.followed);
+
+// we're going to listen to the event of
+// follow-change that we emitted in our function
+// here.
+firstCard.addEventListener('follow-change', (event) => {
+  console.log('Follow change triggered');
+  console.log(event);
+});

@@ -97,6 +97,23 @@ class UserCard extends HTMLElement {
     } else { // if it's fase
       this._btn.textContent = 'Follow';
     }
+    // emit and event
+    // dispatchEvent is going to trigger an event
+    // CustomEvent is away we can pass detail
+    // from the class here to the parent
+    this.dispatchEvent(
+      // CustomEvent has two arguments to the constructor
+      // the first is the event name
+      // second is the event detail (stuff we can add
+      // on the event object).
+      new CustomEvent('follow-change', {
+        detail: {
+          followed: this.followed,
+        },
+        bubbles: true, // the parent can access
+        composed: true, // allows us to cross shadow doms.
+      }),
+    );
   }
 
   // reset the value to the followed to the opposite
