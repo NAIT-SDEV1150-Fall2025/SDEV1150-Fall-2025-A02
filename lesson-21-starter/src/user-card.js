@@ -114,6 +114,11 @@ class UserCard extends HTMLElement {
     this._setFollow(false);
   }
 
+  // to access the items we're going to make a getter
+  get followed() {
+    return this._followed;
+  }
+
   // Respond to attribute changes if needed in the future
   static get observedAttributes() {
     return ['avatar'];

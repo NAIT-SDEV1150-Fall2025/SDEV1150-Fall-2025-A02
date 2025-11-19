@@ -44,3 +44,6 @@ let firstCard = document.querySelector('user-card');
 
 // we can use our follow and unfollow in our code.
 firstCard.follow();
+
+// this is essentially using the getter here.
+console.log(firstCard.followed);
