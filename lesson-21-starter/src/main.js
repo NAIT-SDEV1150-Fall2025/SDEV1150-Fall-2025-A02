@@ -3,7 +3,9 @@ import './user-card.js';
 
 // Create an additional user card using HTML and append it to the main element
 const dynamicUserCard = `
-    <user-card avatar="https://placehold.co/80x80/7700ff/ffffff">
+    <user-card
+      avatar="https://placehold.co/80x80/7700ff/ffffff"
+    >
       <span slot="name">Mipha</span>
       <span slot="description">Zora Champion</span>
     </user-card>`;
@@ -55,3 +57,6 @@ firstCard.addEventListener('follow-change', (event) => {
   console.log('Follow change triggered');
   console.log(event);
 });
+// if you want this from all cards here.
+// document.addEventListener('follow-change', (event) => {
+// or the parent here.
