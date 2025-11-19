@@ -76,7 +76,9 @@ class UserCard extends HTMLElement {
     // set the value created above to the opposite.
     this._btn.addEventListener('click', () => {
       console.log('Follow button clicked');
-      this._setFollow(!this._followed);
+      // this._setFollow(!this._followed);
+      this._onFollow();
+      // move this to use our _onFollow function in the class.
       console.log(this._followed);
     });
 
@@ -88,7 +90,18 @@ class UserCard extends HTMLElement {
     // this is equivalent to self in python
     // we're are updating the value of the _follow attribute on the
     // instance with the value passed in.
-    this._follow = value;
+    this._followed = value;
+    // change the text of the button based on the value of followed
+    if (this._followed) { // if it's true
+      this._btn.textContent = 'Unfollow';
+    } else { // if it's fase
+      this._btn.textContent = 'Follow';
+    }
+  }
+
+  // reset the value to the followed to the opposite
+  _onFollow() {
+    this._setFollow(!this._followed);
   }
 
   // Respond to attribute changes if needed in the future
