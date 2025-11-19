@@ -109,6 +109,7 @@ class UserCard extends HTMLElement {
       new CustomEvent('follow-change', {
         detail: {
           followed: this.followed,
+          userId: null,
         },
         bubbles: true, // the parent can access this event.
         composed: true, // allows us to cross shadow doms.

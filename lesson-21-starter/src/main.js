@@ -55,19 +55,8 @@ console.log(firstCard.followed);
 // here.
 firstCard.addEventListener('follow-change', (event) => {
   console.log('Follow change triggered');
-  console.log(event);
+  console.log(event.detail);
 });
 // if you want this from all cards here.
 // document.addEventListener('follow-change', (event) => {
 // or the parent here.
-
-
-
-
-
-
-
-
-
-
-
