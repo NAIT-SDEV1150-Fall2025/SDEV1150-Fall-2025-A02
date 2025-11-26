@@ -30,12 +30,16 @@ main.addEventListener('follow-change', (event) => {
   let element = event.target;
   console.log(element);
   console.log(element.followed);
+  console.log(element.detail);
   if (element.followed) {
     followCount++;
   } else {
     followCount--;
   }
   console.log(`Total followed: ${followCount}`);
+  // counter element
+  const counterElement = document.querySelector('#follow-counter');
+  counterElement.textContent = `Followed: ${followCount}`;
 });
 
 
