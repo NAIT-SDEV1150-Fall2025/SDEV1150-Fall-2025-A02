@@ -164,6 +164,11 @@ class UserCard extends HTMLElement {
     }
   }
 
+  // LifeCycle method
+  // fired when removed
+  disconnectCallback() {
+    this._btn.removeEventListener('click', this._onButtonClick);
+  }
 
   follow() {
     this._setFollow(true);
