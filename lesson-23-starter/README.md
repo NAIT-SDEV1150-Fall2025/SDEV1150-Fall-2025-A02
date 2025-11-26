@@ -139,12 +139,12 @@ class UserCard extends HTMLElement {
       this.setAttribute('user-id', this.#user.id || '');
       // Update internal slots via shadow DOM query selectors for text nodes.
       // We want to avoid manipulating light DOM directly since we are provided with a user property.
-      const nameSlot = this.querySelector('[slot="name"]');
+      const nameSlot = this.shadowRoot.querySelector('[name="name"]');
       if (nameSlot) {
         nameSlot.textContent = this.#user.name || '';
       }
       
-      const descSlot = this.querySelector('[slot="description"]');
+      const descSlot = this.shadowRoot.querySelector('[name="description"]');
       if (descSlot) {
         descSlot.textContent = this.#user.description || '';
       }
@@ -175,9 +175,7 @@ class UserCard extends HTMLElement {
     // If user property was set before connection, render it now
     if (this.#user) {
       this._renderFromUser();
-    }
-
-    else {
+    } else {
       // Fallback to attributes if user property not provided
       const avatar = this.getAttribute('avatar');
       if (avatar) {
