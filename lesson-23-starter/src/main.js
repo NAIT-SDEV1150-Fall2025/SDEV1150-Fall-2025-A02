@@ -42,7 +42,6 @@ main.addEventListener('follow-change', (event) => {
   counterElement.textContent = `Followed: ${followCount}`;
 });
 
-
 // Theme toggle button logic
 let dark = false;
 const toggleBtn = document.querySelector('#btn-theme');
