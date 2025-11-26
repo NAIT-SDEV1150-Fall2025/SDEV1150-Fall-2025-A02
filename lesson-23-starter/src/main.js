@@ -18,6 +18,21 @@ users.forEach((userObject) => {
   main.appendChild(card);
 });
 
+// listen to the follow change event on main
+// I want you to update the followed count based on
+// if the event target (a user card) is being followed (property)
+// get the total and update it on the element select with
+// #follow-counter
+let followCount = 0;
+
+main.addEventListener('follow-change', (event) => {
+  // get the element
+  let element = event.target;
+  console.log(element);
+  console.log(element.followed);
+});
+
+
 // Theme toggle button logic
 let dark = false;
 const toggleBtn = document.querySelector('#btn-theme');
