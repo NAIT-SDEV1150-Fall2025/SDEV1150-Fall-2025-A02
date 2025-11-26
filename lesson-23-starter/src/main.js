@@ -9,7 +9,7 @@ const users = [
 
 const main = document.querySelector('main');
 // loop through all users
-users.forEach((userObject)=> {
+users.forEach((userObject) => {
   // we're going to create a card
   const card = document.createElement('user-card');
   // we're going to use the setter that we've created here.

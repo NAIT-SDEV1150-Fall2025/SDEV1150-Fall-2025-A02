@@ -81,11 +81,32 @@ class UserCard extends HTMLElement {
     if (this.#user) {
       // handle each attribute.
       // handle avatar
-
+      if (this.#user.avatar) {
+        this._img.src = this.#user.avatar;
+      } else {
+        this._img.src = 'https://placehold.co/80x80/0077ff/ffffff';
+      }
       // handle the id
-      // handle the name
+      // we're just going to set it as an attribute
+      this.setAttribute('user-id', this.#user.id || '');
+      // the above handles both cases if it's blank it'll just set it
+      // to an empty string.
 
+      // handle the name
+      // select the name slot from the shadow root
+      const nameSlot = this.shadowRoot.querySelector('[name="name"]');
+      // [name="name"] css selector to select by attribute name, value pair.
+      if (nameSlot) {
+        // set it the user name if exists otherwise empty string.
+        nameSlot.textContent = this.#user.name || '';
+      }
       // handle the description
+      const descriptionSlot = this.shadowRoot.querySelector('[name="description"]');
+      // [description="description"] css selector to select by attribute description, value pair.
+      if (descriptionSlot) {
+        // set it the user description if exists otherwise empty string.
+        descriptionSlot.textContent = this.#user.description || '';
+      }
     }
   }
 
@@ -93,6 +114,8 @@ class UserCard extends HTMLElement {
   // set this is going to look like we're assigning via an attribute
   // but will call this setter function.
   set user(obj) {
+    console.log('from the user setter');
+    console.log(obj);
     // set the object
     // our object will have the follow {id, name, avatar, description}
     this.#user = obj;
