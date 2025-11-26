@@ -64,13 +64,22 @@ class UserCard extends HTMLElement {
     // Added property to track follow state
     this.#followed = false;
     this.#user = null;
+    // bind a button handler function
+    this._onButtonClick = this._onButtonClick.bind(this);
 
     const shadow = this.attachShadow({ mode: 'open' });
     const content = template.content.cloneNode(true);
-    const img = content.querySelector('img');
-    img.src = this.getAttribute('avatar') || 'https://placehold.co/80x80/0077ff/ffffff';
+
+    // our new image property
+    this._img = content.querySelector('img');
+    // remove the funcitonality from the constructor
+    // img.src = this.getAttribute('avatar') || 'https://placehold.co/80x80/0077ff/ffffff';
+
     this._btn = content.querySelector('button');
-    this._btn.addEventListener('click', () => this._onFollow());
+    // remove the funcitonality from the constructor
+    // this._btn.addEventListener('click', () => this._onFollow());
+    // not here: we're going to move these to the lifecycle
+    // call back function.
     shadow.appendChild(content);
   }
 
@@ -81,6 +90,7 @@ class UserCard extends HTMLElement {
     if (this.#user) {
       // handle each attribute.
       // handle avatar
+      console.log(this._img);
       if (this.#user.avatar) {
         this._img.src = this.#user.avatar;
       } else {
@@ -128,6 +138,32 @@ class UserCard extends HTMLElement {
   get user() {
     return this.#user;
   }
+
+  // we have our event handler fro the button
+  _onButtonClick() {
+    this._setFollow(!this.#followed);
+  }
+
+  // LifeCycle method
+  // fired when the component is added to the page.
+  connectedCallback() {
+    // attach local listeners.
+    this._btn.addEventListener('click', this._onButtonClick);
+    // if the property of user was added before it's connected to the
+    if (this.#user) {
+      // render it
+      this._renderFromUser();
+    } else {
+      // fall back to the attributes.
+      const avatar = this.getAttribute('avatar');
+      if (avatar) {
+        this._img.src = avatar;
+      } else {
+        this._img.src = 'https://placehold.co/80x80/0077ff/ffffff';
+      }
+    }
+  }
+
 
   follow() {
     this._setFollow(true);
