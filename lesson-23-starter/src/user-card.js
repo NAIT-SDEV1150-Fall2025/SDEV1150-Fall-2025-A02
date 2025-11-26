@@ -54,13 +54,16 @@ template.innerHTML = `
 document.body.appendChild(template);
 
 class UserCard extends HTMLElement {
+  // our internal state as private variables.
   #followed = false;
+  #user = null;
 
   constructor() {
     super();
 
     // Added property to track follow state
     this.#followed = false;
+    this.#user = null;
 
     const shadow = this.attachShadow({ mode: 'open' });
     const content = template.content.cloneNode(true);
