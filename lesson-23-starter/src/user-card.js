@@ -74,6 +74,38 @@ class UserCard extends HTMLElement {
     shadow.appendChild(content);
   }
 
+  // we're going to create from the user object.
+  // we also want to trigger this whenever we set the user object.
+  _renderFromUser() {
+    // lets just check if the user exists
+    if (this.#user) {
+      // handle each attribute.
+      // handle avatar
+
+      // handle the id
+      // handle the name
+
+      // handle the description
+    }
+  }
+
+
+  // set this is going to look like we're assigning via an attribute
+  // but will call this setter function.
+  set user(obj) {
+    // set the object
+    // our object will have the follow {id, name, avatar, description}
+    this.#user = obj;
+    // later we're going to render from the user object.
+    this._renderFromUser();
+  }
+
+  // since the #user is private. if we want to make it accessible we need to have
+  // a getter
+  get user() {
+    return this.#user;
+  }
+
   follow() {
     this._setFollow(true);
   }
