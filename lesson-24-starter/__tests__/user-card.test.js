@@ -20,6 +20,7 @@ describe('UserCard', () => {
     expect(
       element.shadowRoot.querySelector('img').getAttribute('src'),
     ).toBe(EXPECTED_IMAGE);
+    // if you add .not in front of to be it tests the opposite.
     // the followed to be false
     const EXPECTED_FOLLOWED = false;
     expect(element.followed).toBe(EXPECTED_FOLLOWED);
