@@ -56,7 +56,7 @@ describe('UserCard', () => {
     expect(descriptionSlot.assignedNodes()[0].textContent).toBe(EXPECTED_DESCRIPTION_SLOT);
   });
 
-  // I want you to write a test that the avat attribute is set correctly
+  // I want you to write a test that the avatar attribute is set correctly
   // create an element
   // set an avatar with setAttribte on that element
   // append it to the page.
