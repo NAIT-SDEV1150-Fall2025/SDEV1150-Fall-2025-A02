@@ -16,5 +16,12 @@ describe('UserCard', () => {
     // Assert make sure that's it's correct
     // first we're going to check that the shadowroot has
     // the image placeholder
+    const EXPECTED_IMAGE = 'https://placehold.co/80x80/0077ff/ffffff';
+    expect(
+      element.shadowRoot.querySelector('img').getAttribute('src'),
+    ).toBe(EXPECTED_IMAGE);
+    // the followed to be false
+    const EXPECTED_FOLLOWED = false;
+    expect(element.followed).toBe(EXPECTED_FOLLOWED);
   });
 })
