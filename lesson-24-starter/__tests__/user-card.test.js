@@ -25,4 +25,27 @@ describe('UserCard', () => {
     const EXPECTED_FOLLOWED = false;
     expect(element.followed).toBe(EXPECTED_FOLLOWED);
   });
-})
+
+  // we're going test the slots
+  test('renders a name and a description', () => {
+    // Arrange step
+    // create an element
+    const element = document.createElement('user-card');
+    document.body.appendChild(element);
+    // create two spans and insert them in the slots.
+    const EXPECTED_NAME_SLOT = 'Vitest user';
+    const nameSpan = document.createElement('span');
+    nameSpan.setAttribute('slot', 'name');
+    nameSpan.textContent = EXPECTED_NAME_SLOT;
+
+    const EXPECTED_DESCRIPTION_SLOT = 'Vitest user';
+    const descriptionSpan = document.createElement('span');
+    descriptionSpan.setAttribute('slot', 'description');
+    descriptionSpan.textContent = EXPECTED_DESCRIPTION_SLOT;
+
+    // go to ASSERT step
+    // check that our slots are correct.
+    // let's get the slots
+    const nameSlot = element.shadowRoot.querySelector('slot[name="name"]');
+  });
+});
