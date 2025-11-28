@@ -57,8 +57,22 @@ describe('UserCard', () => {
   });
 
   // I want you to write a test that the avatar attribute is set correctly
-  // create an element
-  // set an avatar with setAttribte on that element
-  // append it to the page.
-  // assert that the image is update to that element
+  test('sets an avatar attribute', () => {
+    // create an element
+    const element = document.createElement('user-card');
+    // set an avatar with setAttribte on that element
+    const TEST_AVATAR_URL = 'http://example.com/lol/avatar/hi.jpg';
+    element.setAttribute('avatar', TEST_AVATAR_URL);
+    // append it to the page.
+    document.body.appendChild(element);
+
+    // assert that the image is update to that element
+    expect(
+      element.shadowRoot.querySelector('img').getAttribute('src'),
+    ).toBe(TEST_AVATAR_URL);
+  });
+
+  // try to test setting the user
+  // try to test the follow and unfollow methods
+  // try to test the button click on the follow of the element.
 });

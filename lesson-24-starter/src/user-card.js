@@ -41,7 +41,7 @@ template.innerHTML = `
       flex: 0 0 80px;
     }
   </style>
-  
+
   <div class="card">
     <img src="" width="80" height="80" alt="avatar">
     <div class="info">
