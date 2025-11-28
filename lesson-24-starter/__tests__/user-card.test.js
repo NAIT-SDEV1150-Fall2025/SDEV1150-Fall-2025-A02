@@ -38,7 +38,7 @@ describe('UserCard', () => {
     nameSpan.setAttribute('slot', 'name');
     nameSpan.textContent = EXPECTED_NAME_SLOT;
 
-    const EXPECTED_DESCRIPTION_SLOT = 'Vitest user';
+    const EXPECTED_DESCRIPTION_SLOT = 'Vitest Description of User';
     const descriptionSpan = document.createElement('span');
     descriptionSpan.setAttribute('slot', 'description');
     descriptionSpan.textContent = EXPECTED_DESCRIPTION_SLOT;
@@ -53,5 +53,6 @@ describe('UserCard', () => {
     const nameSlot = element.shadowRoot.querySelector('slot[name="name"]');
     const descriptionSlot = element.shadowRoot.querySelector('slot[name="description"]');
     expect(nameSlot.assignedNodes()[0].textContent).toBe(EXPECTED_NAME_SLOT);
+    expect(descriptionSlot.assignedNodes()[0].textContent).toBe(EXPECTED_DESCRIPTION_SLOT);
   });
 });
