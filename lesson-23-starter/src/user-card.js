@@ -120,7 +120,6 @@ class UserCard extends HTMLElement {
     }
   }
 
-
   // set this is going to look like we're assigning via an attribute
   // but will call this setter function.
   set user(obj) {
