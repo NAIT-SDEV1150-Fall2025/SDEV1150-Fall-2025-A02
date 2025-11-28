@@ -6,6 +6,15 @@ import '../src/user-card.js';
 describe('UserCard', () => {
   // we're going to put a few tests.
   test('renders with the default properties', () => {
+    // Arrange step
+    // create an element
+    const element = document.createElement('user-card');
+    document.body.appendChild(element);
+    // Act (we're not going to do here)
+    // where you do the thing
 
+    // Assert make sure that's it's correct
+    // first we're going to check that the shadowroot has
+    // the image placeholder
   });
 })
