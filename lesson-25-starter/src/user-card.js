@@ -81,11 +81,23 @@ class UserCard extends HTMLElement {
 
       this.setAttribute('user-id', this.#user.id || '');
       const nameSlot = this.shadowRoot.querySelector('[name="name"]');
+      // let's check the name and desc slot
+      console.log(nameSlot);
       if (nameSlot) {
         nameSlot.textContent = this.#user.name || '';
       }
 
-      const descSlot = this.shadowRoot.querySelector('[name="descriptions"]');
+      // on the line below we had a typo the way we fixed this was to
+      // print them out to the console and run the following testing script
+      /* // in the console.
+      let userCards = document.querySelectorAll('user-card');
+      userCards[2].user = { id: 'u1', name: 'Zelda', description: 'Princess of Hyrule' };
+
+      userCards[2].shadowRoot.querySelector('[name="descriptions"]');
+      */
+      const descSlot = this.shadowRoot.querySelector('[name="description"]');
+      // let's check the name and desc slot
+      console.log(descSlot);
       if (descSlot) {
         descSlot.textContent = this.#user.description || '';
       }
