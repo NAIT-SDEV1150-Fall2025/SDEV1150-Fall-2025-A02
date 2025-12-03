@@ -5,7 +5,7 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
   // we're going to specify a test environment
   test: {
-    environment: 'jsdom',
+    environment: 'jsdom', // you can also make this happy-dom.
   },
 });
 // we need to make node.js understand how to parse
