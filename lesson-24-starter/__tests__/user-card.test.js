@@ -9,9 +9,9 @@ describe('UserCard', () => {
     // Arrange step
     // create an element
     const element = document.createElement('user-card');
-    document.body.appendChild(element);
     // Act (we're not going to do here)
     // where you do the thing
+    document.body.appendChild(element);
 
     // Assert make sure that's it's correct
     // first we're going to check that the shadowroot has
@@ -31,7 +31,6 @@ describe('UserCard', () => {
     // Arrange step
     // create an element
     const element = document.createElement('user-card');
-    document.body.appendChild(element);
     // create two spans and insert them in the slots.
     const EXPECTED_NAME_SLOT = 'Vitest user';
     const nameSpan = document.createElement('span');
@@ -46,6 +45,8 @@ describe('UserCard', () => {
     // I need to append the slots to the element
     element.appendChild(nameSpan);
     element.appendChild(descriptionSpan);
+    // ACT step
+    document.body.appendChild(element);
 
     // go to ASSERT step
     // check that our slots are correct.
@@ -73,6 +74,33 @@ describe('UserCard', () => {
   });
 
   // try to test setting the user
+  test('sets the user object', () => {
+    // arrange
+    // create an element
+    const element = document.createElement('user-card');
+    // create a user object
+    const EXPECTED_USER_OBJECT = {
+      id: 'testid1234',
+      name: 'Gary Steves',
+      description: 'Testing user',
+      avatar: 'https://example.com/testing.png',
+    };
+    // act
+    // set the user object on the element
+    element.user = EXPECTED_USER_OBJECT;
+    // add it to the page.
+    document.body.appendChild(element);
+
+    // assert
+    // avatar should be set on the image
+    const img = element.shadowRoot.querySelector('img');
+    expect(img.getAttribute('src')).toBe(
+      EXPECTED_USER_OBJECT.avatar,
+    );
+    // user id should be an attribute
+    // name slot should be what is on the user obj
+    // description slot should be what is on the user obj
+  });
   // try to test the follow and unfollow methods
   // try to test the button click on the follow of the element.
 });
