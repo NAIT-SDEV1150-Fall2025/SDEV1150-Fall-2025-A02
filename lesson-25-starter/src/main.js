@@ -23,10 +23,17 @@ let followedCount = 0;
 
 // Listen on the container (event bubbles out of shadow)
 main.addEventListener('follow-change', (e) => {
+  // let's take a look at the event object.
+  console.log(e.detail);
   // Add one or subtract one based on follow state
-  followedCount += e.detail.isFollowed ? 1 : -1;
+  // a ternary is like a mini if statement.
+  // followedCount += e.detail.isFollowed ? 1 : -1;
+  // change the above to use the real value
+  // followedCount += e.detail.followed ? 1 : -1;
   // Or, use Array filter for accurate count
-  // followedCount = Array.from(document.querySelectorAll('user-card')).filter(c => c.followed).length;
+  followedCount = Array.from(
+    document.querySelectorAll('user-card'),
+  ).filter(c => c.followed).length;
   const counterEl = document.querySelector('#follow-counter');
   counterEl.textContent = `Followed: ${followedCount}`;
   console.log('follow-change:', e.detail);

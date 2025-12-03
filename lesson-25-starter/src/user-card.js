@@ -151,8 +151,12 @@ class UserCard extends HTMLElement {
   _setFollow(value) {
     this.#followed = value;
     this._btn.textContent = this.#followed ? 'Following' : 'Follow';
+    // the event that we're triggering.
     this.dispatchEvent(new CustomEvent('follow-change', {
-      detail: { id: this.getAttribute('user-id') || null, followed: this.followed },
+      detail: {
+        id: this.getAttribute('user-id') || null,
+        followed: this.followed,
+      },
       bubbles: true,
       composed: true,
     }));
