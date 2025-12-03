@@ -41,7 +41,7 @@ template.innerHTML = `
       flex: 0 0 80px;
     }
   </style>
-  
+
   <div class="card">
     <img src="" width="80" height="80" alt="avatar">
     <div class="info">
@@ -152,7 +152,18 @@ class UserCard extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'avatars' && this.shadowRoot) {
+    /*
+    made a small test script to see if this works
+
+    let userCards = document.querySelectorAll("user-card")
+    let testAvatar = "https://placehold.co/80x80/yellow/green"
+    userCards[2].setAttribute('avatar', testAvatar);
+
+    we also checked all of the inputs and just checked if
+    they were what we expected in the lines below.
+    */
+
+    if (name === 'avatar' && this.shadowRoot) {
       console.log('Attribute changed:', name, oldValue, newValue);
       const img = this.shadowRoot.querySelector('img');
       if (img) {
