@@ -1,6 +1,22 @@
-import { expect, describe, test } from 'vitest';
+import { expect, describe, test, beforeEach, afterEach } from 'vitest';
 // we're going to import our card.
 import '../src/user-card.js';
+
+// we're going to create an element before each test.
+let element;
+
+// there's a function called beforeEach that runs beforeEach test
+beforeEach(() => {
+  // we just have to write this once which is handy.
+  element = document.createElement('user-card');
+});
+
+// there's a function called afterEach that runs after each test.
+afterEach(() => {
+  // remove the element.
+  element.remove();
+  element = null;
+});
 
 // let's create a section
 describe('UserCard', () => {
@@ -8,7 +24,7 @@ describe('UserCard', () => {
   test('renders with the default properties', () => {
     // Arrange step
     // create an element
-    const element = document.createElement('user-card');
+    // const element = document.createElement('user-card'); // removed because of the beforeEach
     // Act (we're not going to do here)
     // where you do the thing
     document.body.appendChild(element);
@@ -30,7 +46,7 @@ describe('UserCard', () => {
   test('renders a name and a description', () => {
     // Arrange step
     // create an element
-    const element = document.createElement('user-card');
+    // const element = document.createElement('user-card'); // removed because of the beforeEach
     // create two spans and insert them in the slots.
     const EXPECTED_NAME_SLOT = 'Vitest user';
     const nameSpan = document.createElement('span');
@@ -60,7 +76,7 @@ describe('UserCard', () => {
   // I want you to write a test that the avatar attribute is set correctly
   test('sets an avatar attribute', () => {
     // create an element
-    const element = document.createElement('user-card');
+    // const element = document.createElement('user-card'); // removed because of the beforeEach
     // set an avatar with setAttribte on that element
     const TEST_AVATAR_URL = 'http://example.com/lol/avatar/hi.jpg';
     element.setAttribute('avatar', TEST_AVATAR_URL);
@@ -77,7 +93,7 @@ describe('UserCard', () => {
   test('sets the user object', () => {
     // arrange
     // create an element
-    const element = document.createElement('user-card');
+    // const element = document.createElement('user-card'); // removed because of the beforeEach
     // create a user object
     const EXPECTED_USER_OBJECT = {
       id: 'testid1234',
@@ -98,8 +114,19 @@ describe('UserCard', () => {
       EXPECTED_USER_OBJECT.avatar,
     );
     // user id should be an attribute
+    expect(element.getAttribute('user-id')).toBe(
+      EXPECTED_USER_OBJECT.id,
+    );
     // name slot should be what is on the user obj
+    const nameSlot = element.shadowRoot.querySelector('[name="name"]');
+    expect(nameSlot.textContent).toBe(
+      EXPECTED_USER_OBJECT.name,
+    );
     // description slot should be what is on the user obj
+    const decriptionSlot = element.shadowRoot.querySelector('[name="description"]');
+    expect(decriptionSlot.textContent).toBe(
+      EXPECTED_USER_OBJECT.description,
+    );
   });
   // try to test the follow and unfollow methods
   // try to test the button click on the follow of the element.
